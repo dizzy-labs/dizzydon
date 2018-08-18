@@ -1,0 +1,229 @@
+/*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
+if this CSS seems awful (it is) is mostly cause of that and selectively overriding mismatched silliness
+i'll clean it up eventually maybe probably possibly it could happen idk*/
+body {
+    color: #fff1e8;
+}
+.button {
+    background-color: #7E2553;
+    color: #fff1e8;
+}
+.icon-button.inverted,
+.text-icon-button:active,
+.text-icon-button:focus,
+.text-icon-button:hover {
+    color: #c2c3c7;
+}
+.icon-button,
+.text-icon-button {
+    color: #fff1e8;
+}
+.drawer {
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+.drawer__inner__mastodon {
+    background: transparent url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.80078 31.757813" width="234.80078" height="31.757812"><path d="M19.599609 0c-1.05 0-2.10039.375-2.90039 1.125L0 16.925781v14.832031h234.80078V17.025391l-16.5-15.900391c-1.6-1.5-4.20078-1.5-5.80078 0l-13.80078 13.099609c-1.6 1.5-4.19883 1.5-5.79883 0L179.09961 1.125c-1.6-1.5-4.19883-1.5-5.79883 0L159.5 14.224609c-1.6 1.5-4.20078 1.5-5.80078 0L139.90039 1.125c-1.6-1.5-4.20078-1.5-5.80078 0l-13.79883 13.099609c-1.6 1.5-4.20078 1.5-5.80078 0L100.69922 1.125c-1.600001-1.5-4.198829-1.5-5.798829 0l-13.59961 13.099609c-1.6 1.5-4.200781 1.5-5.800781 0L61.699219 1.125c-1.6-1.5-4.198828-1.5-5.798828 0L42.099609 14.224609c-1.6 1.5-4.198828 1.5-5.798828 0L22.5 1.125C21.7.375 20.649609 0 19.599609 0z" fill="%23282C37"/></svg>') no-repeat bottom/100% auto;
+}
+.drawer--header,
+.drawer__header {
+    background: #1D2B53;
+    font-size: 16px;
+    filter: drop-shadow(0px 3px 3px #000);
+}
+.column-header {
+    background: #1D2B53;
+    filter: drop-shadow(0px 3px 3px #000);
+}
+.column-header__button,
+.compose-form .compose-form__buttons-wrapper {
+    background: #1D2B53;
+}
+.column,
+.drawer__inner,
+.drawer.mbstobon-0 .contents,
+.drawer.mbstobon-1 .contents,
+.drawer.mbstobon-2 .contents,
+.drawer.mbstobon-3 .contents {
+    filter: initial;
+    background: rgba(0, 0, 0, .6);
+    box-shadow: 3px 4px 9px 0px #000;
+}
+.column > .scrollable {
+    background: transparent;
+}
+.status {
+    border-bottom: 1px solid rgb(0, 0, 0, .3);
+    opacity: 1;
+}
+.detailed-status__action-bar,
+.notification-follow,
+.status {
+    border-bottom-width: 8px;
+    border-bottom-color: rgb(0, 0, 0, .3);
+}
+.icon-button {
+    color: #c2c3c7;
+    filter: drop-shadow(1px 1px 0px #000);
+}
+.icon-button:active,
+.icon-button:focus,
+.icon-button:hover {
+    color: #5f574f;
+}
+.composer--options {
+    background: #1d2b53;
+}
+.composer--options--dropdown--content--item .fa-unlock-alt,
+.status__visibility-icon.fa-unlock-alt {
+    color: #008751;
+}
+.notification__favourite-icon-wrapper .fa.star-icon,
+.star-icon.active {
+    color: #ffec27;
+}
+.composer--options--dropdown--content--item .fa-globe,
+.status__visibility-icon.fa-globe {
+    color: #29adff;
+}
+.drawer > .contents {
+    filter: drop-shadow(0px 4px 4px #000);
+}
+.ui {
+    background-color: #5f574f;
+}
+.drawer--search input,
+.search__input {
+    color: rgba(0, 0, 0, .85);
+    background: #fff1e8;
+}
+.drawer--search input:focus {
+    background: #fff1e8;
+    box-shadow: 0 0 4px 0 #29adff;
+}
+.column-subheading {
+    background: rgba(0, 0, 0, .2);
+    color: rgba(176, 190, 197, .5);
+}
+.column-link {
+    color: #fff1e8;
+    background: none;
+}
+.column-link:hover {
+    background: rgba(95, 87, 79, .6);
+}
+.getting-started {
+    background: rgba(0, 0, 0, .2);
+    color: #c2c3c7;
+}
+.getting-started__wrapper,
+.getting_started {
+    background: none;
+}
+.getting-started p {
+    color: #fff1e8;
+}
+.getting-started a {
+    color: #c2c3c7;
+}
+.composer--spoiler input,
+.composer--textarea > label .textarea,
+.compose-form .autosuggest-textarea__textarea,
+.compose-form .spoiler-input__input {
+    background: #fff1e8;
+    color: #000;
+}
+.composer--options .icon-button,
+.composer--options .text-icon-button {
+    color: #fff1e8;
+    opacity: 1;
+}
+.icon-button:active,
+.icon-button:focus,
+.icon-button:hover {
+    color: #5f574f;
+}
+.detailed-status {
+    background: rgba(95, 87, 79, .3);
+}
+.detailed-status__action-bar {
+    background: #5f574f;
+    border-top: none;
+}
+.status__content .status__content__spoiler-link {
+    transition: all .1s;
+    background: #5F574F;
+    box-shadow: 0px 1px 2px 0 #000;
+    color: #fff1e8;
+}
+.status__content .status__content__spoiler-link:hover {
+    background: #5f574f;
+    text-decoration: none;
+    box-shadow: 0px -1px 1px 0 #000;
+    transform: translateY(1px);
+}
+.account__header,
+.account__header__wrapper {
+    background-color: rgb(0, 0, 0, .3);
+}
+.account__header .account__header__fields dt {
+    color: #fff1e8;
+    background: #5f5f4f;
+}
+.account__header .account__header__fields dd {
+    color: #fff1e8;
+    background: rgb(0, 0, 0, .8);
+}
+.account__action-bar__tab > span {
+    color: #fff1e8;
+}
+.account__action-bar__tab strong {
+    color: #c2c3c7;
+}
+.status__prepend,
+.status__prepend .status__display-name strong {
+    color: #c2c3c7;
+}
+.status__relative-time {
+    color: #c2c3c7;
+}
+.status-card {
+    border: 1px solid #000;
+    background: rgba(95, 87, 79, .5);
+}
+.status-card__title {
+    color: #fff1e8;
+}
+.status-card:hover {
+    background: rgba(0, 0, 0, .35);
+}
+.compose-form .compose-form__modifiers {
+    background: #fff1e8;
+}
+.composer--upload_form,
+.compose-form .compose-form__modifiers .compose-form__upload-wrapper {
+    color: #fff1e8;
+    background: rgba(0, 0, 0, .45);
+}
+.composer--upload_form--item > div > .close {
+    mix-blend-mode: difference;
+    color: #fff1e8;
+}
+.composer--upload_form--item > div input {
+    color: #fff1e8;
+}
+.composer--publisher > .count,
+.compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
+    color: #fff1e8;
+    mix-blend-mode: difference;
+    font-size: 14px;
+    text-shadow: 0 0 2px #000
+}
+.composer--upload_form--item > div input::placeholder {
+    opacity: .9;
+    color: #c2c3c7;
+}
+input::placeholder {
+    color: #000;
+    opacity: .75;
+}
