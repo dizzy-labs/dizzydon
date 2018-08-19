@@ -3,5 +3,7 @@ Custom css for mastodon. Supports vanilla, glitch-soc, and sleeping town front e
 # using
 Requires [Stylus](https://add0n.com/stylus.html)
 
-For now you have to create a new userstyle yourself to use this.
-On the management page for stylus, click the button to write a new userstyle. Then copy and paste the contents of pico-8stodon.css into the new userstyle, add your mastodon instance to the "Applies to" section at the bottom of the page, and save. 
+[Install with Stylus from userstyles.org](https://userstyles.org/styles/163455/pico-8stodon) 
+
+# this doesn't change anything on my instance
+Be sure to add your mastodon instance to the "Applies to" section at the bottom of the styles settings page to use it on an instance that's not alread set up. Open the management page for Stylus, then click this style in the list, then add your instances domain to the list of websites it applies to at the bottom of the edit page.
