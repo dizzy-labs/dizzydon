@@ -29,6 +29,10 @@ body,
     background-color: #7E2553;
     color: #fff1e8;
 }
+.focusable:focus {
+	outline: 0;
+	background: #37322e;
+}
 .icon-button.inverted,
 .text-icon-button:active,
 .text-icon-button:focus,
