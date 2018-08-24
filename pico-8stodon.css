@@ -1,4 +1,4 @@
-@-moz-document domain("sleeping.town"), domain("glitch.social"), domain("cybre.space"), domain("mastodon.social"), domain("toot.cat"), domain("botsin.space"), domain("chitter.xyz") {
+@-moz-document domain("sleeping.town"), domain("jubi.life"), domain("glitch.social"), domain("cybre.space"), domain("mastodon.social"), domain("toot.cat"), domain("botsin.space"), domain("chitter.xyz") {
 /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 if this CSS seems awful (it is) is mostly cause of that and selectively overriding mismatched silliness
 */
