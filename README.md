@@ -1,6 +1,6 @@
-# mastodon-userstyle
+# A userstyle for Mastodon
 Custom css for mastodon. Supports vanilla, glitch-soc, and sleeping town front ends. Based on pico-8 pallette.
-# using
+# Using this stylesheet
 Requires [Stylus](https://add0n.com/stylus.html)
 
 [Install with Stylus from userstyles.org](https://userstyles.org/styles/163455/pico-8stodon) 
