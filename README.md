@@ -7,3 +7,6 @@ Requires [Stylus](https://add0n.com/stylus.html)
 
 # hey, this doesn't change anything on my instance?
 Be sure to add your mastodon instance to the "Applies to" section at the bottom of the styles settings page to use it on an instance that's not alread set up. Open the management page for Stylus, then click this style in the list, then add your instances domain to the list of websites it applies to at the bottom of the edit page.
+
+# Ok so the shadows are flickering
+Try installing the no-filter version. Open the management page for stylus -> create new style -> click the import button under Mozilla Format -> copy and paste the code from pico-8stodon_no-filter.css -> name it and save. Then just use that version as you would the other.
