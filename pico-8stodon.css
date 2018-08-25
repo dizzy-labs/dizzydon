@@ -275,7 +275,7 @@ body,
 }
 .account__header,
 .account__header__wrapper {
-    background-color: rgb(0, 0, 0, .3);
+    background-color: rgba(0, 0, 0, .3);
 }
 .account__header .account__header__fields dt {
     color: #fff1e8;
@@ -319,7 +319,7 @@ body,
 .navigation-bar,
 .drawer--account {
     color: #c2c3c7;
-    background: rgb(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .6);
 }
 .compose-form {
     padding: 5px;
