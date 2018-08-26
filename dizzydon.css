@@ -46,6 +46,9 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     a {
         color: linkColor !important;
     }
+    .dropdown-menu__item a {
+        background: primaryUiColor;
+    }
     .composer--options--dropdown--content--item .fa-unlock-alt,
     .status__visibility-icon.fa-unlock-alt {
         color: #008751;
