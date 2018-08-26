@@ -11,9 +11,12 @@
 
 @var            color    primaryFontColor   "Primary font color"                   #fff1e8
 @var            color    secondaryFontColor "Secondary,lower contrast, font color" #c2c3c7
+@var            color    linkColor          "Font color for links"                 #c2c3c7
 @var            color    primaryUiColor     "Header colors"                        #1D2B53
 @var            color    secondaryUiColor   "Post button color"                    #7E2553
 @var            color    columnColor        "Column background color"              #24221e
+@var            color    secondaryColumnColor "Secondary column color"             #1e1c19
+@var            color    detailsColor       "Color for open statuses"              #37322e
 @var            color    backgroundColor    "Main background color"                #5f574f
 @var            checkbox dropShadows        "Use drop-shadow filters"              1
 @var            checkbox columnShadows      "Use box-shadows on columns"           1
@@ -35,8 +38,13 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .getting-started p,
     .status-card__title,
     .composer--upload_form--item > div input,
-    .column-header__button {
+    .column-header__button,
+    .account__display-name strong,
+    .status__display-name strong{
         color: primaryFontColor;
+    }
+    a {
+        color: linkColor !important;
     }
     .composer--options--dropdown--content--item .fa-unlock-alt,
     .status__visibility-icon.fa-unlock-alt {
@@ -58,7 +66,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     }
     .focusable:focus {
         outline: 0;
-        background: #37322e;
+        background: detailsColor;
     }
     .icon-button.inverted,
     .text-icon-button:active,
@@ -143,7 +151,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .notification-follow,
     .status {
         border-bottom-width: 8px;
-        border-bottom-color: #1b1816;
+        border-bottom-color: secondaryColumnColor;
     }
     .muted .status__content a,
     .muted .status__content p,
@@ -177,7 +185,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .drawer--search input,
     .search__input {
         color: #000;
-        background: primaryFontColor;
+        background: #fff1e8;
     }
     .drawer--search > .icon {
         color: #000;
@@ -187,10 +195,10 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     }
     .drawer--search input:focus,
     .search__input:focus {
-        background: primaryFontColor;
+        background: #fff1e8;
     }
     .search-popout {
-        background: primaryFontColor;
+        background: #fff1e8;
     }
     .search-popout > * {
         color: #5f574f;
@@ -216,7 +224,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
         border-bottom: 1px solid #393f4f;
     }
     .column-subheading {
-        background: #1e1c19;
+        background: secondaryColumnColor;
         color: secondaryFontColor;
     }
     .column-link {
@@ -227,7 +235,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
         background: #1d1a17;
     }
     .getting-started {
-        background: #1e1c19;
+        background: secondaryColumnColor;
         color: secondaryFontColor;
     }
     .getting-started__wrapper,
@@ -241,7 +249,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .composer--textarea > label .textarea,
     .compose-form .autosuggest-textarea__textarea,
     .compose-form .spoiler-input__input {
-        background: primaryFontColor;
+        background: #fff1e8;
         color: #000;
     }
     .composer--reply,
@@ -269,17 +277,20 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
         color: #5f574f;
     }
     .detailed-status {
-        background: #37322e;
+        background: detailsColor;
     }
     .detailed-status__action-bar {
-        background: #1d1a17;
+        background: secondaryColumnColor;
         border-top: none;
+    }
+    .status__content {
+        color: primaryFontColor;
     }
     .status__content .status__content__spoiler-link {
         transition: all .1s;
         background: #5F574F;
         box-shadow: 0px 1px 2px 0 #000;
-        color: primaryFontColor;
+        color: #fff1e8;
     }
     .status__content .status__content__spoiler-link:hover {
         background: #5f574f;
