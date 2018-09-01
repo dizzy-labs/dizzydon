@@ -1,19 +1,22 @@
-# A userstyle for Mastodon
-* Custom css for mastodon.
-* Supports vanilla, glitch-soc, and sleeping town front ends.
-* Based on pico-8 pallette.
-* Requires [Stylus](https://add0n.com/stylus.html)
-
 # Dizzydon
-Dizzydon is a usercss conversion of the older pico-8stodon.css
-That just means it's got customizable colors and toggles for shadows and transparency.
-To use it: Open the management page for stylus -> check "as Usercss" next to the "Write new style" button -> click the "Write new style" button -> select ALL of the code already in the editor -> copy and paste the code from dizzydon.css over it -> save. Click the gear in the stylus menu to change settings.
+(Requires [Stylus](https://add0n.com/stylus.html)) A customizable userstyle for Mastodon
+# Features
+* Custom css for mastodon
+* Supports vanilla, glitch-soc, and sleeping town front ends
+* Default theme based on pico-8 pallette
+* Customizable colors and toggles for shadows and transparency
 
-# Pico-8stodon
-This is the older version of Dizzydon. It's hosted on userstyles.org so you can download it easily from there if you like the default colors and transparency effects.
+# How to Install
+(First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
+Download <b>dizzydon.json</b> -> Open the management page for stylus (click the stylus icon in your browser and click "manage") -> click "Import Styles" in the bottom of the left column -> select dizzydon.json
+After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
+
+
+
+# Troubleshooting and FAQ
+* # What's Pico-8stodon?
+* * This is the older version of Dizzydon. It's recommended that you use Dizzydon instead, as this is no longer actively maintained and lacks all of Dizzydon's customization without any benefits of it's own. It's available on userstyles.org so you can download it easily from there if you like the default colors and transparency effects.
 [Install with Stylus from userstyles.org](https://userstyles.org/styles/163455/pico-8stodon) 
-
-# Troubleshooting
 * # Hey, this doesn't change anything on my instance?
 * * Be sure to add your mastodon instance to the "Applies to" section on the styles settings page to use it on an instance that's not alread set up. Open the management page for Stylus, then click this style in the list, then add your instances domain to the list of websites it applies to at the bottom or middle of the edit page.
 
