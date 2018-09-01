@@ -8,7 +8,7 @@
 
 # How to Install or Update
 (First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
-Download <b>dizzydon.json</b> -> Open the management page for stylus (click the stylus icon in your browser and click <b>"manage"</b>) -> click <b>"Import Styles"</b> in the bottom of the left column -> open <b>dizzydon.json</b>
+Download <b>dizzydon.json</b> from the [current release](https://github.com/dizzy-labs/dizzydon/releases/tag/v2.0.0) -> Open the management page for stylus (click the stylus icon in your browser and click <b>"manage"</b>) -> click <b>"Import Styles"</b> in the bottom of the left column -> open <b>dizzydon.json</b>
 
 After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
 
