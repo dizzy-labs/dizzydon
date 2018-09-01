@@ -1,10 +1,14 @@
 # Dizzydon
-(Requires [Stylus](https://add0n.com/stylus.html)) A customizable userstyle for Mastodon
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-default.png" width="600px" alt="dizzydon default styling">
+!(Requires [Stylus](https://add0n.com/stylus.html)) A customizable userstyle for Mastodon
+
 # Features
 * Custom css for mastodon
 * Supports vanilla, glitch-soc, and sleeping town front ends
 * Default theme based on pico-8 palette
 * Customizable colors and toggles for shadows and transparency
+
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-pink-reverse-columns.png" width="600px" alt="dizzydon with a lighter styling and reversed columns">
 
 # How to Install
 (First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
@@ -14,6 +18,8 @@ The easiest way is to [install dizzydon](https://raw.githubusercontent.com/dizzy
 Alternatively, download <b>dizzydon.json</b> from the [current release](https://github.com/dizzy-labs/dizzydon/releases/tag/v2.0.0) -> Open the management page for stylus (click the stylus icon in your browser and click <b>"manage"</b>) -> click <b>"Import Styles"</b> in the bottom of the left column -> open <b>dizzydon.json</b>
 
 After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
+
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="200px" alt="dizzydon with a lighter styling and reversed columns">
 
 # Updating
 Open the management page for stylus and click the refresh icon for the style
