@@ -18,6 +18,9 @@
 @var            color    secondaryColumnColor "Secondary column color"             #1e1c19
 @var            color    detailsColor       "Color for open statuses"              #37322e
 @var            color    backgroundColor    "Main background color"                #5f574f
+@var            checkbox lightHeaders       "Use dark font for headers"            0
+@var            checkbox lightButtons       "Use dark font for post button"        0
+@var            checkbox rightAlign         "Start columns on the right"           0
 @var            checkbox dropShadows        "Use drop-shadow filters"              1
 @var            checkbox columnShadows      "Use box-shadows on columns"           1
 @var            checkbox transparentColumns "Use semi-transparent columns"         0
@@ -30,7 +33,7 @@ domain("toot.cat"),
 domain("botsin.space"),
 domain("chitter.xyz") {
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
-if this CSS seems awful (it is) is mostly cause of that and selectively overriding mismatched silliness
+quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */
     body,
     .icon-button,
@@ -40,7 +43,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .composer--upload_form--item > div input,
     .column-header__button,
     .account__display-name strong,
-    .status__display-name strong{
+    .status__display-name strong {
         color: primaryFontColor;
     }
     a {
@@ -62,7 +65,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     }
     .notification__favourite-icon-wrapper .fa.star-icon,
     .star-icon.active {
-        color: #ffec27;
+        color: #ffec27 !important;
     }
     .composer--options--dropdown--content--item .fa-globe,
     .status__visibility-icon.fa-globe,
@@ -72,13 +75,12 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     }
     .button {
         background-color: secondaryUiColor !important;
-        color: primaryFontColor;
+        color: #fff1e8;
     }
     .focusable:focus {
         outline: 0;
         background: detailsColor;
     }
-    .icon-button.inverted,
     .text-icon-button:active,
     .text-icon-button:focus,
     .text-icon-button:hover,
@@ -118,6 +120,11 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
         font-size: 16px;
         border-radius: 6px;
     }
+    .drawer--header a,
+    .drawer__header a {
+        color: #fff1e8 !important;
+    }
+
     .column-header,
     .column-header__button,
     .compose-form .compose-form__buttons-wrapper,
@@ -125,6 +132,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .drawer--header,
     .drawer__header {
         background: primaryUiColor;
+        color: #fff1e8;
     }
     .column {
         min-width: 260px !important;
@@ -155,7 +163,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .column-back-button,
     .column-header__back-button {
         background: primaryUiColor !important;
-        color: #29adff;
+        color: #fff1e8 !important;
     }
     .detailed-status__action-bar,
     .notification-follow,
@@ -238,7 +246,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
         color: secondaryFontColor;
     }
     .column-link {
-        color: primaryFontColor;
+        color: primaryFontColor !important;
         background: none;
     }
     .column-link:hover {
@@ -251,9 +259,6 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     .getting-started__wrapper,
     .getting_started {
         background: none;
-    }
-    .getting-started a {
-        color: secondaryFontColor;
     }
     .composer--spoiler input,
     .composer--textarea > label .textarea,
@@ -278,7 +283,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     }
     .composer--options .icon-button,
     .composer--options .text-icon-button {
-        color: primaryFontColor;
+        color: #fff1e8;
         opacity: 1;
     }
     .icon-button:active,
@@ -377,7 +382,7 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     }
 
     .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
-        color: primaryFontColor;
+        color: #fff1e8 !important;
         font-size: 14px;
     }
     .composer--upload_form--item > div input::placeholder {
@@ -389,6 +394,11 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
         opacity: .75;
     }
 
+    if rightAlign {
+        .columns-area {
+            flex-direction: row-reverse !important;
+        }
+    }
     if dropShadows {
         .drawer--header,
         .drawer__header,
@@ -410,6 +420,46 @@ if this CSS seems awful (it is) is mostly cause of that and selectively overridi
     if transparentColumns {
         .column {
             background: rgba(0, 0, 0, .6);
+        }
+    }
+    if lightHeaders {
+        .column-back-button,
+        .column-header__back-button {
+            background: primaryUiColor !important;
+            color: #000 !important;
+        }
+        .column-header,
+        .column-header__button,
+        .compose-form .compose-form__buttons-wrapper,
+        .column-header__back-button,
+        .drawer--header,
+        .drawer__header {
+            background: primaryUiColor !important;
+            color: #000 !important;
+        }
+        .composer--options .icon-button,
+        .composer--options .text-icon-button {
+            color: #000 !important;
+            opacity: 1;
+        }
+        .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
+            color: #000 !important;
+            font-size: 14px;
+        }
+        .compose-form__buttons .fa,
+        .compose-form__buttons-wrapper .icon-buttons .fa,
+        .compose-form__buttons .text-icon-button {
+            color: #000 !important;
+        }
+        .drawer--header a,
+        .drawer__header a {
+            color: #000 !important;
+        }
+    }
+    if lightButtons {
+        .button {
+            background-color: secondaryUiColor !important;
+            color: #000 !important;
         }
     }
 }
