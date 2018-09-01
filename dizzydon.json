@@ -1,0 +1,146 @@
+[
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": "https://github.com/dizzy-labs/mastodon-userstyle",
+		"originalMd5": null,
+		"sourceCode": "/* ==UserStyle==\n@name           Dizzydon\n@namespace      dizzy-labs\n@version        2.0.0\n@description    Redesign of Mastodon\n@author         dizzy-labs\n@homepageURL    https://github.com/dizzy-labs/mastodon-userstyle\n@supportURL     https://github.com/dizzy-labs/mastodon-userstyle/issues\n@license        CC BY-NC-SA\n@preprocessor   stylus\n\n@var            color    primaryFontColor   \"Primary font color\"                   #fff1e8\n@var            color    secondaryFontColor \"Secondary,lower contrast, font color\" #c2c3c7\n@var            color    linkColor          \"Font color for links\"                 #c2c3c7\n@var            color    primaryUiColor     \"Header colors\"                        #1D2B53\n@var            color    secondaryUiColor   \"Post button color\"                    #7E2553\n@var            color    columnColor        \"Column background color\"              #24221e\n@var            color    secondaryColumnColor \"Secondary column color\"             #1e1c19\n@var            color    detailsColor       \"Color for open statuses\"              #37322e\n@var            color    backgroundColor    \"Main background color\"                #5f574f\n@var            checkbox dropShadows        \"Use drop-shadow filters\"              1\n@var            checkbox columnShadows      \"Use box-shadows on columns\"           1\n@var            checkbox transparentColumns \"Use semi-transparent columns\"         0\n==/UserStyle== */\n@-moz-document domain(\"sleeping.town\"),\ndomain(\"glitch.social\"),\ndomain(\"cybre.space\"),\ndomain(\"mastodon.social\"),\ndomain(\"toot.cat\"),\ndomain(\"botsin.space\"),\ndomain(\"chitter.xyz\") {\n    /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends\nif this CSS seems awful (it is) is mostly cause of that and selectively overriding mismatched silliness\n*/\n    body,\n    .icon-button,\n    .text-icon-button,\n    .getting-started p,\n    .status-card__title,\n    .composer--upload_form--item > div input,\n    .column-header__button,\n    .account__display-name strong,\n    .status__display-name strong{\n        color: primaryFontColor;\n    }\n    a {\n        color: linkColor !important;\n    }\n    .dropdown-menu {\n        background: secondaryColumnColor;\n    }\n    .dropdown-menu__item a {\n        background: detailsColor;\n    }\n    .dropdown-menu__item a:hover,\n    .dropdown-menu__item a:focus {\n        background: primaryUiColor;\n    }\n    .composer--options--dropdown--content--item .fa-unlock-alt,\n    .status__visibility-icon.fa-unlock-alt {\n        color: #008751;\n    }\n    .notification__favourite-icon-wrapper .fa.star-icon,\n    .star-icon.active {\n        color: #ffec27 !important;\n    }\n    .composer--options--dropdown--content--item .fa-globe,\n    .status__visibility-icon.fa-globe,\n    .column-header > .column-header__back-button,\n    .account__header__fields a {\n        color: #29adff;\n    }\n    .button {\n        background-color: secondaryUiColor !important;\n        color: primaryFontColor;\n    }\n    .focusable:focus {\n        outline: 0;\n        background: detailsColor;\n    }\n    .icon-button.inverted,\n    .text-icon-button:active,\n    .text-icon-button:focus,\n    .text-icon-button:hover,\n    .column-header__button:hover {\n        color: secondaryFontColor;\n    }\n    .column-link__badge,\n    .column-inline-form,\n    .setting-text {\n        background: #5f574f;\n        color: primaryFontColor;\n    }\n\n    .drawer {\n        padding-top: 10px;\n        padding-bottom: 0;\n        flex: 0 0 280px;\n    }\n    .drawer__tab {\n        color: primaryFontColor;\n    }\n    .column,\n    .drawer {\n        padding: 0 !important;\n        margin: 10px 5px 0 5px;\n        overflow: auto;\n        border-radius: 6px;\n    }\n    .drawer__inner__mastodon {\n        background: transparent none no-repeat bottom/100% auto\n    }\n    .drawer__inner {\n        background: none !important;\n    }\n    .drawer--header,\n    .drawer__header {\n        font-size: 16px;\n        border-radius: 6px;\n    }\n    .column-header,\n    .column-header__button,\n    .compose-form .compose-form__buttons-wrapper,\n    .column-header__back-button,\n    .drawer--header,\n    .drawer__header {\n        background: primaryUiColor;\n    }\n    .column {\n        min-width: 260px !important;\n        max-width: 400px !important;\n        flex: 1 1 auto !important;\n        filter: initial;\n        background: columnColor;\n    }\n    .empty-column-indicator,\n    .error-column {\n        color: secondaryFontColor;\n        background: none;\n    }\n    .columns-area {\n        display: flex;\n        flex-direction: row;\n    }\n    .drawer.mbstobon-0 .contents,\n    .drawer.mbstobon-1 .contents,\n    .drawer.mbstobon-2 .contents,\n    .drawer.mbstobon-3 .contents {\n        filter: initial;\n        background: none;\n    }\n    .column > .scrollable {\n        background: none;\n    }\n    .column-back-button,\n    .column-header__back-button {\n        background: primaryUiColor !important;\n        color: #29adff;\n    }\n    .detailed-status__action-bar,\n    .notification-follow,\n    .status {\n        border-bottom-width: 8px;\n        border-bottom-color: secondaryColumnColor;\n    }\n    .muted .status__content a,\n    .muted .status__content p,\n    .muted .status__display-name strong {\n        color: #948E86;\n    }\n    .muted .status__content .status__content__spoiler-link {\n        background: #5f574f;\n        color: #948E86;\n    }\n    .icon-button {\n        transition: all .1s;\n        color: secondaryFontColor;\n    }\n    .icon-button:active,\n    .icon-button:focus,\n    .icon-button:hover {\n        color: secondaryFontColor;\n    }\n    .icon-button.disabled {\n        color: rgba(0, 0, 0, .6);\n        cursor: default;\n        filter: none;\n    }\n    .composer--options {\n        background: primaryUiColor !important;\n    }\n    .ui {\n        background-color: backgroundColor;\n    }\n    .drawer--search input,\n    .search__input {\n        color: #000;\n        background: #fff1e8;\n    }\n    .drawer--search > .icon {\n        color: #000;\n    }\n    .search__icon .fa-times-circle {\n        color: #000;\n    }\n    .drawer--search input:focus,\n    .search__input:focus {\n        background: #fff1e8;\n    }\n    .search-popout {\n        background: #fff1e8;\n    }\n    .search-popout > * {\n        color: #5f574f;\n    }\n    .search-popout h4,\n    .search-popout em {\n        color: #000;\n    }\n    .search-results {\n        background: rgba(0, 0, 0, .9);\n        color: secondaryFontColor;\n        box-shadow: 0px 3px 6px 0px #000;\n    }\n    .search-results__header {\n        color: inherit;\n        background: #000;\n    }\n    .search-results__section h5 {\n        background: none;\n    }\n    .account {\n        padding: 10px;\n        border-bottom: 1px solid #393f4f;\n    }\n    .column-subheading {\n        background: secondaryColumnColor;\n        color: secondaryFontColor;\n    }\n    .column-link {\n        color: primaryFontColor;\n        background: none;\n    }\n    .column-link:hover {\n        background: #1d1a17;\n    }\n    .getting-started {\n        background: secondaryColumnColor;\n        color: secondaryFontColor;\n    }\n    .getting-started__wrapper,\n    .getting_started {\n        background: none;\n    }\n    .getting-started a {\n        color: secondaryFontColor;\n    }\n    .composer--spoiler input,\n    .composer--textarea > label .textarea,\n    .compose-form .autosuggest-textarea__textarea,\n    .compose-form .spoiler-input__input {\n        background: #fff1e8;\n        color: #000;\n    }\n    .composer--reply,\n    .reply-indicator {\n        margin: 0 0 -2px;\n        border-radius: 4px 4px 0 0;\n        padding: 10px;\n        background: rgba(0, 0, 0, .5);\n        color: secondaryFontColor;\n    }\n    .composer--reply > .content,\n    .reply-indicator__header,\n    .reply-indicator__content,\n    .reply-indicator__display-name {\n        color: secondaryFontColor;\n    }\n    .composer--options .icon-button,\n    .composer--options .text-icon-button {\n        color: primaryFontColor;\n        opacity: 1;\n    }\n    .icon-button:active,\n    .icon-button:focus,\n    .icon-button:hover {\n        color: #5f574f;\n    }\n    .detailed-status {\n        background: detailsColor;\n    }\n    .detailed-status__action-bar {\n        background: secondaryColumnColor;\n        border-top: none;\n    }\n    .status__content {\n        color: primaryFontColor;\n    }\n    .status__content .status__content__spoiler-link {\n        transition: all .1s;\n        background: #5F574F;\n        box-shadow: 0px 1px 2px 0 #000;\n        color: #fff1e8;\n    }\n    .status__content .status__content__spoiler-link:hover {\n        background: #5f574f;\n        text-decoration: none;\n        box-shadow: 0px -1px 1px 0 #000;\n        transform: translateY(1px);\n    }\n    .account__header,\n    .account__header__wrapper {\n        background-color: rgba(0, 0, 0, .3);\n    }\n    .account__header .account__header__fields dt {\n        color: primaryFontColor;\n        background: #5f5f4f;\n    }\n    .account__header .account__header__fields dd {\n        color: primaryFontColor;\n        background: #1d1a17\n    }\n    .account__action-bar__tab > span {\n        color: primaryFontColor;\n    }\n    .account__action-bar__tab strong,\n    .status__prepend,\n    .status__prepend .status__display-name strong,\n    .status__relative-time {\n        color: secondaryFontColor;\n    }\n    .account--panel {\n        background: #1d1a17;\n        border-top: none;\n        border-bottom: 3px solid #000;\n    }\n    .account--panel .fa-check {\n        color: #00e436;\n    }\n    .account--panel .fa-times {\n        color: #ff004d;\n    }\n    .status.status-direct {\n        background: #5f574f;\n        color: primaryFontColor;\n    }\n    .status-card {\n        border: 1px solid #000;\n        background: #4a443e;\n    }\n    .status-card:hover {\n        background: #24211e;\n    }\n    .navigation-bar,\n    .drawer--account {\n        color: secondaryFontColor;\n        background: rgba(0, 0, 0, .6);\n    }\n    .compose-form {\n        padding: 5px;\n    }\n    .compose-form .compose-form__modifiers {\n        background: primaryFontColor;\n    }\n    .composer--upload_form,\n    .compose-form .compose-form__modifiers .compose-form__upload-wrapper {\n        color: primaryFontColor;\n        background: rgba(0, 0, 0, .45);\n    }\n    .composer--upload_form--item > div > .close {\n        mix-blend-mode: difference;\n        color: primaryFontColor;\n    }\n    .composer--publisher > .count {\n        font-size: 14px;\n        font-weight: 500;\n    }\n\n    .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {\n        color: primaryFontColor;\n        font-size: 14px;\n    }\n    .composer--upload_form--item > div input::placeholder {\n        opacity: .9;\n        color: secondaryFontColor;\n    }\n    input::placeholder {\n        color: #000;\n        opacity: .75;\n    }\n\n    if dropShadows {\n        .drawer--header,\n        .drawer__header,\n        .column-header,\n        .drawer > .contents,\n        .composer,\n        .compose-form {\n            filter: drop-shadow(0px 3px 3px #000);\n        }\n        .icon-button {\n            filter: drop-shadow(1px 1px 0px #000);\n        }\n    }\n    if columnShadows {\n        .column {\n            box-shadow: 3px 4px 9px 0px #000;\n        }\n    }\n    if transparentColumns {\n        .column {\n            background: rgba(0, 0, 0, .6);\n        }\n    }\n}",
+		"sections": [
+			{
+				"code": "/* ==UserStyle==\n@name           Dizzydon\n@namespace      dizzy-labs\n@version        2.0.0\n@description    Redesign of Mastodon\n@author         dizzy-labs\n@homepageURL    https://github.com/dizzy-labs/mastodon-userstyle\n@supportURL     https://github.com/dizzy-labs/mastodon-userstyle/issues\n@license        CC BY-NC-SA\n@preprocessor   stylus\n\n@var            color    primaryFontColor   \"Primary font color\"                   #fff1e8\n@var            color    secondaryFontColor \"Secondary,lower contrast, font color\" #c2c3c7\n@var            color    linkColor          \"Font color for links\"                 #c2c3c7\n@var            color    primaryUiColor     \"Header colors\"                        #1D2B53\n@var            color    secondaryUiColor   \"Post button color\"                    #7E2553\n@var            color    columnColor        \"Column background color\"              #24221e\n@var            color    secondaryColumnColor \"Secondary column color\"             #1e1c19\n@var            color    detailsColor       \"Color for open statuses\"              #37322e\n@var            color    backgroundColor    \"Main background color\"                #5f574f\n@var            checkbox dropShadows        \"Use drop-shadow filters\"              1\n@var            checkbox columnShadows      \"Use box-shadows on columns\"           1\n@var            checkbox transparentColumns \"Use semi-transparent columns\"         0\n==/UserStyle== */",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [],
+				"regexps": []
+			},
+			{
+				"code": "body,\n  .icon-button,\n  .text-icon-button,\n  .getting-started p,\n  .status-card__title,\n  .composer--upload_form--item > div input,\n  .column-header__button,\n  .account__display-name strong,\n  .status__display-name strong {\n    color: #fff1e8;\n  }\n  a {\n    color: #dbcfcf !important;\n  }\n  .dropdown-menu {\n    background: #1e1c19;\n  }\n  .dropdown-menu__item a {\n    background: #37322e;\n  }\n  .dropdown-menu__item a:hover,\n  .dropdown-menu__item a:focus {\n    background: #1d2b53;\n  }\n  .composer--options--dropdown--content--item .fa-unlock-alt,\n  .status__visibility-icon.fa-unlock-alt {\n    color: #008751;\n  }\n  .notification__favourite-icon-wrapper .fa.star-icon,\n  .star-icon.active {\n    color: #ffec27 !important;\n  }\n  .composer--options--dropdown--content--item .fa-globe,\n  .status__visibility-icon.fa-globe,\n  .column-header > .column-header__back-button,\n  .account__header__fields a {\n    color: #29adff;\n  }\n  .button {\n    background-color: #7e2553 !important;\n    color: #fff1e8;\n  }\n  .focusable:focus {\n    outline: 0;\n    background: #37322e;\n  }\n  .icon-button.inverted,\n  .text-icon-button:active,\n  .text-icon-button:focus,\n  .text-icon-button:hover,\n  .column-header__button:hover {\n    color: #c2c3c7;\n  }\n  .column-link__badge,\n  .column-inline-form,\n  .setting-text {\n    background: #5f574f;\n    color: #fff1e8;\n  }\n  .drawer {\n    padding-top: 10px;\n    padding-bottom: 0;\n    flex: 0 0 280px;\n  }\n  .drawer__tab {\n    color: #fff1e8;\n  }\n  .column,\n  .drawer {\n    padding: 0 !important;\n    margin: 10px 5px 0 5px;\n    overflow: auto;\n    border-radius: 6px;\n  }\n  .drawer__inner__mastodon {\n    background: transparent none no-repeat bottom/100% auto;\n  }\n  .drawer__inner {\n    background: none !important;\n  }\n  .drawer--header,\n  .drawer__header {\n    font-size: 16px;\n    border-radius: 6px;\n  }\n  .column-header,\n  .column-header__button,\n  .compose-form .compose-form__buttons-wrapper,\n  .column-header__back-button,\n  .drawer--header,\n  .drawer__header {\n    background: #1d2b53;\n  }\n  .column {\n    min-width: 260px !important;\n    max-width: 400px !important;\n    flex: 1 1 auto !important;\n    filter: initial;\n    background: #24221e;\n  }\n  .empty-column-indicator,\n  .error-column {\n    color: #c2c3c7;\n    background: none;\n  }\n  .columns-area {\n    display: flex;\n    flex-direction: row;\n  }\n  .drawer.mbstobon-0 .contents,\n  .drawer.mbstobon-1 .contents,\n  .drawer.mbstobon-2 .contents,\n  .drawer.mbstobon-3 .contents {\n    filter: initial;\n    background: none;\n  }\n  .column > .scrollable {\n    background: none;\n  }\n  .column-back-button,\n  .column-header__back-button {\n    background: #1d2b53 !important;\n    color: #29adff;\n  }\n  .detailed-status__action-bar,\n  .notification-follow,\n  .status {\n    border-bottom-width: 8px;\n    border-bottom-color: #1e1c19;\n  }\n  .muted .status__content a,\n  .muted .status__content p,\n  .muted .status__display-name strong {\n    color: #948e86;\n  }\n  .muted .status__content .status__content__spoiler-link {\n    background: #5f574f;\n    color: #948e86;\n  }\n  .icon-button {\n    transition: all 0.1s;\n    color: #c2c3c7;\n  }\n  .icon-button:active,\n  .icon-button:focus,\n  .icon-button:hover {\n    color: #c2c3c7;\n  }\n  .icon-button.disabled {\n    color: rgba(0,0,0,0.6);\n    cursor: default;\n    filter: none;\n  }\n  .composer--options {\n    background: #1d2b53 !important;\n  }\n  .ui {\n    background-color: #5f574f;\n  }\n  .drawer--search input,\n  .search__input {\n    color: #000;\n    background: #fff1e8;\n  }\n  .drawer--search > .icon {\n    color: #000;\n  }\n  .search__icon .fa-times-circle {\n    color: #000;\n  }\n  .drawer--search input:focus,\n  .search__input:focus {\n    background: #fff1e8;\n  }\n  .search-popout {\n    background: #fff1e8;\n  }\n  .search-popout > * {\n    color: #5f574f;\n  }\n  .search-popout h4,\n  .search-popout em {\n    color: #000;\n  }\n  .search-results {\n    background: rgba(0,0,0,0.9);\n    color: #c2c3c7;\n    box-shadow: 0px 3px 6px 0px #000;\n  }\n  .search-results__header {\n    color: inherit;\n    background: #000;\n  }\n  .search-results__section h5 {\n    background: none;\n  }\n  .account {\n    padding: 10px;\n    border-bottom: 1px solid #393f4f;\n  }\n  .column-subheading {\n    background: #1e1c19;\n    color: #c2c3c7;\n  }\n  .column-link {\n    color: #fff1e8;\n    background: none;\n  }\n  .column-link:hover {\n    background: #1d1a17;\n  }\n  .getting-started {\n    background: #1e1c19;\n    color: #c2c3c7;\n  }\n  .getting-started__wrapper,\n  .getting_started {\n    background: none;\n  }\n  .getting-started a {\n    color: #c2c3c7;\n  }\n  .composer--spoiler input,\n  .composer--textarea > label .textarea,\n  .compose-form .autosuggest-textarea__textarea,\n  .compose-form .spoiler-input__input {\n    background: #fff1e8;\n    color: #000;\n  }\n  .composer--reply,\n  .reply-indicator {\n    margin: 0 0 -2px;\n    border-radius: 4px 4px 0 0;\n    padding: 10px;\n    background: rgba(0,0,0,0.5);\n    color: #c2c3c7;\n  }\n  .composer--reply > .content,\n  .reply-indicator__header,\n  .reply-indicator__content,\n  .reply-indicator__display-name {\n    color: #c2c3c7;\n  }\n  .composer--options .icon-button,\n  .composer--options .text-icon-button {\n    color: #fff1e8;\n    opacity: 1;\n  }\n  .icon-button:active,\n  .icon-button:focus,\n  .icon-button:hover {\n    color: #5f574f;\n  }\n  .detailed-status {\n    background: #37322e;\n  }\n  .detailed-status__action-bar {\n    background: #1e1c19;\n    border-top: none;\n  }\n  .status__content {\n    color: #fff1e8;\n  }\n  .status__content .status__content__spoiler-link {\n    transition: all 0.1s;\n    background: #5f574f;\n    box-shadow: 0px 1px 2px 0 #000;\n    color: #fff1e8;\n  }\n  .status__content .status__content__spoiler-link:hover {\n    background: #5f574f;\n    text-decoration: none;\n    box-shadow: 0px -1px 1px 0 #000;\n    transform: translateY(1px);\n  }\n  .account__header,\n  .account__header__wrapper {\n    background-color: rgba(0,0,0,0.3);\n  }\n  .account__header .account__header__fields dt {\n    color: #fff1e8;\n    background: #5f5f4f;\n  }\n  .account__header .account__header__fields dd {\n    color: #fff1e8;\n    background: #1d1a17;\n  }\n  .account__action-bar__tab > span {\n    color: #fff1e8;\n  }\n  .account__action-bar__tab strong,\n  .status__prepend,\n  .status__prepend .status__display-name strong,\n  .status__relative-time {\n    color: #c2c3c7;\n  }\n  .account--panel {\n    background: #1d1a17;\n    border-top: none;\n    border-bottom: 3px solid #000;\n  }\n  .account--panel .fa-check {\n    color: #00e436;\n  }\n  .account--panel .fa-times {\n    color: #ff004d;\n  }\n  .status.status-direct {\n    background: #5f574f;\n    color: #fff1e8;\n  }\n  .status-card {\n    border: 1px solid #000;\n    background: #4a443e;\n  }\n  .status-card:hover {\n    background: #24211e;\n  }\n  .navigation-bar,\n  .drawer--account {\n    color: #c2c3c7;\n    background: rgba(0,0,0,0.6);\n  }\n  .compose-form {\n    padding: 5px;\n  }\n  .compose-form .compose-form__modifiers {\n    background: #fff1e8;\n  }\n  .composer--upload_form,\n  .compose-form .compose-form__modifiers .compose-form__upload-wrapper {\n    color: #fff1e8;\n    background: rgba(0,0,0,0.45);\n  }\n  .composer--upload_form--item > div > .close {\n    mix-blend-mode: difference;\n    color: #fff1e8;\n  }\n  .composer--publisher > .count {\n    font-size: 14px;\n    font-weight: 500;\n  }\n  .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {\n    color: #fff1e8;\n    font-size: 14px;\n  }\n  .composer--upload_form--item > div input::placeholder {\n    opacity: 0.9;\n    color: #c2c3c7;\n  }\n  input::placeholder {\n    color: #000;\n    opacity: 0.75;\n  }\n  .column {\n    box-shadow: 3px 4px 9px 0px #000;\n  }\n  .column {\n    background: rgba(0,0,0,0.6);\n  }",
+				"urls": [],
+				"urlPrefixes": [],
+				"domains": [
+					"sleeping.town",
+					"glitch.social",
+					"cybre.space",
+					"mastodon.social",
+					"toot.cat",
+					"botsin.space",
+					"chitter.xyz"
+				],
+				"regexps": []
+			}
+		],
+		"usercssData": {
+			"vars": {
+				"primaryFontColor": {
+					"type": "color",
+					"label": "Primary font color",
+					"name": "primaryFontColor",
+					"value": null,
+					"default": "rgb(255, 241, 232)",
+					"options": null
+				},
+				"secondaryFontColor": {
+					"type": "color",
+					"label": "Secondary,lower contrast, font color",
+					"name": "secondaryFontColor",
+					"value": null,
+					"default": "rgb(194, 195, 199)",
+					"options": null
+				},
+				"linkColor": {
+					"type": "color",
+					"label": "Font color for links",
+					"name": "linkColor",
+					"value": "rgb(219, 207, 207)",
+					"default": "rgb(194, 195, 199)",
+					"options": null
+				},
+				"primaryUiColor": {
+					"type": "color",
+					"label": "Header colors",
+					"name": "primaryUiColor",
+					"value": null,
+					"default": "rgb(29, 43, 83)",
+					"options": null
+				},
+				"secondaryUiColor": {
+					"type": "color",
+					"label": "Post button color",
+					"name": "secondaryUiColor",
+					"value": null,
+					"default": "rgb(126, 37, 83)",
+					"options": null
+				},
+				"columnColor": {
+					"type": "color",
+					"label": "Column background color",
+					"name": "columnColor",
+					"value": null,
+					"default": "rgb(36, 34, 30)",
+					"options": null
+				},
+				"secondaryColumnColor": {
+					"type": "color",
+					"label": "Secondary column color",
+					"name": "secondaryColumnColor",
+					"value": null,
+					"default": "rgb(30, 28, 25)",
+					"options": null
+				},
+				"detailsColor": {
+					"type": "color",
+					"label": "Color for open statuses",
+					"name": "detailsColor",
+					"value": null,
+					"default": "rgb(55, 50, 46)",
+					"options": null
+				},
+				"backgroundColor": {
+					"type": "color",
+					"label": "Main background color",
+					"name": "backgroundColor",
+					"value": null,
+					"default": "rgb(95, 87, 79)",
+					"options": null
+				},
+				"dropShadows": {
+					"type": "checkbox",
+					"label": "Use drop-shadow filters",
+					"name": "dropShadows",
+					"value": "0",
+					"default": "1",
+					"options": null
+				},
+				"columnShadows": {
+					"type": "checkbox",
+					"label": "Use box-shadows on columns",
+					"name": "columnShadows",
+					"value": null,
+					"default": "1",
+					"options": null
+				},
+				"transparentColumns": {
+					"type": "checkbox",
+					"label": "Use semi-transparent columns",
+					"name": "transparentColumns",
+					"value": "1",
+					"default": "0",
+					"options": null
+				}
+			},
+			"name": "Dizzydon",
+			"namespace": "dizzy-labs",
+			"version": "2.0.0",
+			"description": "Redesign of Mastodon",
+			"author": "dizzy-labs",
+			"homepageURL": "https://github.com/dizzy-labs/mastodon-userstyle",
+			"supportURL": "https://github.com/dizzy-labs/mastodon-userstyle/issues",
+			"license": "CC BY-NC-SA",
+			"preprocessor": "stylus"
+		},
+		"name": "Dizzydon",
+		"description": "Redesign of Mastodon",
+		"author": "dizzy-labs"
+	}
+]
