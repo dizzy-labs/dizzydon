@@ -6,7 +6,7 @@
 * Default theme based on pico-8 palette
 * Customizable colors and toggles for shadows and transparency
 
-# How to Install or Update
+# How to Install
 (First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
 
 The easiest way is to [install dizzydon](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/dizzydon_source.user.css) by opening the .user.css file in stylus and clicking <b>Install Style</b> in the top left.
@@ -15,8 +15,9 @@ Alternatively, download <b>dizzydon.json</b> from the [current release](https://
 
 After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
 
-The process for updating is the same as installing.
-
+# Updating
+Open the management page for stylus and click the refresh icon for the style
+Alternatively, follow the install instructions again for the new version and it will overwrite the old version.
 
 # Troubleshooting and FAQ
 * # What's Pico-8stodon?
