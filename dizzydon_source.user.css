@@ -283,8 +283,17 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .composer--options .icon-button,
     .composer--options .text-icon-button {
-        color: #fff1e8;
+        color: #fff1e8 !important;
         opacity: 1;
+    }
+    .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
+        color: #fff1e8 !important;
+        font-size: 14px;
+    }
+    .compose-form__buttons .fa,
+    .compose-form__buttons-wrapper .icon-buttons .fa,
+    .compose-form__buttons .text-icon-button {
+        color: #fff1e8 !important;
     }
     .icon-button:active,
     .icon-button:focus,
