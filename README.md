@@ -3,7 +3,7 @@
 # Features
 * Custom css for mastodon
 * Supports vanilla, glitch-soc, and sleeping town front ends
-* Default theme based on pico-8 pallette
+* Default theme based on pico-8 palette
 * Customizable colors and toggles for shadows and transparency
 
 # How to Install or Update
