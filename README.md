@@ -7,7 +7,8 @@
 # Dizzydon
 Dizzydon is a usercss conversion of the older pico-8stodon.css
 That just means it's got customizable colors and toggles for shadows and transparency.
-To use it: Open the management page for stylus -> check "as Usercss" next to the "Write new style" button -> click the "Write new style" button -> select ALL of the code already in the editor -> copy and paste the code from dizzydon.css over it -> save. Click the gear in the stylus menu to change settings.
+To use it: Download <b>dizzydon.json</b> -> Open the management page for stylus (click the stylus icon in your browser and click "manage") -> click "Import Styles" in the bottom of the left column -> select dizzydon.json
+After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
 
 # Pico-8stodon
 This is the older version of Dizzydon. It's hosted on userstyles.org so you can download it easily from there if you like the default colors and transparency effects.
