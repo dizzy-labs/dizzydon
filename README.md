@@ -1,6 +1,8 @@
 # Dizzydon
 <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-default.png" width="600px" alt="dizzydon default styling">
-!(Requires [Stylus](https://add0n.com/stylus.html)) A customizable userstyle for Mastodon
+A customizable userstyle for Mastodon
+
+[Requires Stylus](https://add0n.com/stylus.html)
 
 # Features
 * Custom css for mastodon
