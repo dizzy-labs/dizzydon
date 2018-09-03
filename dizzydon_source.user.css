@@ -15,7 +15,7 @@
 @var            color    primaryUiColor     "Header colors"                        #1D2B53
 @var            color    secondaryUiColor   "Post button color"                    #7E2553
 @var            color    columnColor        "Column background color"              #24221e
-@var            color    secondaryColumnColor "Secondary column color"             #1e1c19
+@var            color    secondaryColumnColor "Secondary column color"             #191715
 @var            color    detailsColor       "Color for open statuses"              #37322e
 @var            color    backgroundColor    "Main background color"                #5f574f
 @var            checkbox lightHeaders       "Use dark font for headers"            0
@@ -50,14 +50,15 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: linkColor !important;
     }
     .dropdown-menu {
-        background: secondaryColumnColor;
+        background: secondaryColumnColor !important;
     }
     .dropdown-menu__item a {
-        background: detailsColor;
+        background: detailsColor !important;
     }
     .dropdown-menu__item a:hover,
     .dropdown-menu__item a:focus {
-        background: primaryUiColor;
+        background: primaryUiColor !important;
+        text-shadow: 0 0 0.25em rgba(0,0,0,.75);
     }
     .composer--options--dropdown--content--item .fa-unlock-alt,
     .status__visibility-icon.fa-unlock-alt {
@@ -75,7 +76,8 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .button {
         background-color: secondaryUiColor !important;
-        color: #fff1e8;
+        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        color: #fff1e8 !important;
     }
     .focusable:focus {
         outline: 0;
@@ -110,7 +112,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         border-radius: 6px;
     }
     .drawer__inner__mastodon {
-        background: transparent none no-repeat bottom/100% auto
+        background: transparent none no-repeat bottom/100% auto;
     }
     .drawer__inner {
         background: none !important;
@@ -127,12 +129,17 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
 
     .column-header,
     .column-header__button,
+    .column-header>button,
     .compose-form .compose-form__buttons-wrapper,
     .column-header__back-button,
     .drawer--header,
     .drawer__header {
-        background: primaryUiColor;
-        color: #fff1e8;
+        background: primaryUiColor !important;
+        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        color: #fff1e8 !important;
+    }
+    .compose-form__buttons-wrapper .icon-button {
+        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
     }
     .column {
         min-width: 260px !important;
@@ -163,6 +170,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .column-back-button,
     .column-header__back-button {
         background: primaryUiColor !important;
+        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
         color: #fff1e8 !important;
     }
     .detailed-status__action-bar,
@@ -174,11 +182,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .muted .status__content a,
     .muted .status__content p,
     .muted .status__display-name strong {
-        color: #948E86;
-    }
-    .muted .status__content .status__content__spoiler-link {
-        background: #5f574f;
-        color: #948E86;
+        color: secondaryFontColor;
     }
     .icon-button {
         transition: all .1s;
@@ -241,24 +245,27 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         padding: 10px;
         border-bottom: 1px solid #393f4f;
     }
-    .column-subheading {
-        background: secondaryColumnColor;
+    .column-subheading,
+    .getting-started {
+        background: secondaryColumnColor !important;
         color: secondaryFontColor;
     }
     .column-link {
         color: primaryFontColor !important;
-        background: none;
+        background: detailsColor;
     }
     .column-link:hover {
-        background: #1d1a17;
+        background: secondaryColumnColor;
     }
     .getting-started {
-        background: secondaryColumnColor;
         color: secondaryFontColor;
     }
     .getting-started__wrapper,
     .getting_started {
         background: none;
+    }
+    .getting-started__footer {
+        background: secondaryColumnColor;
     }
     .composer--spoiler input,
     .composer--textarea > label .textarea,
@@ -281,6 +288,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .reply-indicator__display-name {
         color: secondaryFontColor;
     }
+    .compose-form .spoiler-input.spoiler-input--visible {
+        margin-top: 16px;
+    }
     .composer--options .icon-button,
     .composer--options .text-icon-button {
         color: #fff1e8 !important;
@@ -292,8 +302,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .compose-form__buttons .fa,
     .compose-form__buttons-wrapper .icon-buttons .fa,
-    .compose-form__buttons .text-icon-button {
+    .compose-form__buttons .fa,
+    .compose-form__buttons-wrapper .icon-buttons .fa,
+    .compose-form__buttons .text-icon-button,
+    .compose-form__buttons-wrapper .icon-button,{
         color: #fff1e8 !important;
+        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
     }
     .icon-button:active,
     .icon-button:focus,
@@ -310,17 +324,36 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .status__content {
         color: primaryFontColor;
     }
-    .status__content .status__content__spoiler-link {
+    .reply-indicator__content p, .status__content p {
+        margin-bottom: 0;
+    }
+    .status__content__spoiler,
+    .status__content.status__content--with-spoiler .status__content__text{
+        padding: 10px !important;
+        padding-top: 18px !important;
+        /*
+        background: detailsColor !important;
+        border-radius: 0 0 8px 8px;*/
+    }
+    .status__content__spoiler-link {
         transition: all .1s;
-        background: #5F574F;
-        box-shadow: 0px 1px 2px 0 #000;
-        color: #fff1e8;
+        background: secondaryColumnColor !important;
+        color: primaryFontColor !important;
+        width: 100% !important;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+    .muted .status__content__spoiler-link {
+        background: detailsColor !important;
     }
     .status__content .status__content__spoiler-link:hover {
-        background: #5f574f;
         text-decoration: none;
-        box-shadow: 0px -1px 1px 0 #000;
-        transform: translateY(1px);
+        box-shadow: 0px 0px 4px 0px #000;
+    }
+    .media-gallery__item-thumbnail img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: crisp-edges;
     }
     .account__header,
     .account__header__wrapper {
@@ -433,42 +466,31 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     if lightHeaders {
         .column-back-button,
-        .column-header__back-button {
-            background: primaryUiColor !important;
-            color: #000 !important;
-        }
+        .column-header__back-button,
         .column-header,
         .column-header__button,
+        .column-header>button,
         .compose-form .compose-form__buttons-wrapper,
         .column-header__back-button,
         .drawer--header,
-        .drawer__header {
-            background: primaryUiColor !important;
-            color: #000 !important;
-        }
+        .drawer__header,
         .composer--options .icon-button,
-        .composer--options .text-icon-button {
-            color: #000 !important;
-            opacity: 1;
-        }
-        .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
-            color: #000 !important;
-            font-size: 14px;
-        }
+        .composer--options .text-icon-button
+        .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter,
         .compose-form__buttons .fa,
         .compose-form__buttons-wrapper .icon-buttons .fa,
-        .compose-form__buttons .text-icon-button {
-            color: #000 !important;
-        }
+        .compose-form__buttons .text-icon-button,
+        .compose-form__buttons-wrapper .icon-button,
         .drawer--header a,
         .drawer__header a {
             color: #000 !important;
+            text-shadow: 0 0 0.25em rgba(255,255,255,.35) !important;
         }
     }
     if lightButtons {
         .button {
-            background-color: secondaryUiColor !important;
             color: #000 !important;
+            text-shadow: 0 0 0.25em rgba(255,255,255,.35) !important;
         }
     }
 }
