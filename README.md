@@ -16,9 +16,7 @@ A customizable userstyle for Mastodon
 # How to Install
 (First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
 
-The easiest way is to click this link to [install dizzydon](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/dizzydon_source.user.css) by opening the .user.css file in stylus and clicking <b>Install Style</b> in the top left.
-
-Alternatively, download <b>dizzydon.json</b> from the [current release](https://github.com/dizzy-labs/dizzydon/releases/tag/V2.1.0) -> Open the management page for stylus (click the stylus icon in your browser and click <b>"manage"</b>) -> click <b>"Import Styles"</b> in the bottom of the left column -> open <b>dizzydon.json</b>
+The easiest way is to click this link to [install dizzydon](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/dizzydon_source.user.css) by opening the .user.css file in stylus and clicking <b>Install Style</b> in the top left of the screen that stylus opens.
 
 After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
 
