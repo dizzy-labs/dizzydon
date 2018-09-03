@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon
 @namespace      dizzy-labs
-@version        2.0.0
+@version        2.2.1
 @description    Redesign of Mastodon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -81,7 +81,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .focusable:focus {
         outline: 0;
-        background: detailsColor;
+        background: secondaryColumnColor;
     }
     
     .text-icon-button,
@@ -130,6 +130,13 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         overflow: auto;
         border-radius: 6px;
     }
+    ::-webkit-scrollbar-track {
+        background: detailsColor !important;
+        border: 1px solid secondaryColumnColor;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: secondaryColumnColor !important;
+    }
     .drawer__inner__mastodon {
         background: transparent none no-repeat bottom/100% auto;
     }
@@ -144,6 +151,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .drawer--header a,
     .drawer__header a {
         color: #fff1e8 !important;
+    }
+    .drawer:first-child > * {
+        margin-left: 0;
+    }
+    .drawer:first-child > .contents {
+        padding-left: 0;
     }
 
     .column-header,
@@ -185,6 +198,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .column > .scrollable {
         background: none;
+        overflow-y: auto;
     }
     .column-back-button,
     .column-header__back-button {
@@ -315,9 +329,11 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: #fff1e8 !important;
         text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
     }
-    .detailed-status {
+    .detailed-status,
+    .focusable:focus .detailed-status__action-bar {
         background: detailsColor;
     }
+    .focusable:focus .detailed-status,
     .detailed-status__action-bar {
         background: secondaryColumnColor;
         border-top: none;
@@ -351,6 +367,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         text-decoration: none;
         box-shadow: 0px 0px 4px 0px #000;
     }
+    .status.collapsed .status__content:after {
+        background: linear-gradient(rgba(40,44,55,0), secondaryColumnColor);
+    }
     .media-gallery__item-thumbnail img {
         image-rendering: -webkit-optimize-contrast;
         image-rendering: -moz-crisp-edges;
@@ -360,13 +379,23 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .account__header__wrapper {
         background-color: rgba(0, 0, 0, .3);
     }
+    .account__header .account__header__fields dl {
+        border-top: 1px solid secondaryColumnColor;
+        border-bottom: 1px solid secondaryColumnColor;
+    }
     .account__header .account__header__fields dt {
         color: primaryFontColor;
-        background: #5f5f4f;
+        background: secondaryColumnColor;
     }
     .account__header .account__header__fields dd {
         color: primaryFontColor;
-        background: #1d1a17
+        background: detailsColor;
+    }
+    .account__disclaimer {
+        color: primaryFontColor;
+    }
+    .account__section-headline {
+        background: secondaryColumnColor;
     }
     .account__action-bar__tab > span {
         color: primaryFontColor;
@@ -389,20 +418,21 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: #ff004d;
     }
     .status.status-direct {
-        background: #5f574f;
+        background: detailsColor;
         color: primaryFontColor;
     }
     .status-card {
         border: 1px solid #000;
-        background: #4a443e;
+        background: detailsColor;
     }
-    .status-card:hover {
-        background: #24211e;
+    .status-card:hover,
+    a.status-card:hover {
+        background: secondaryColumnColor;
     }
     .navigation-bar,
     .drawer--account {
         color: secondaryFontColor;
-        background: rgba(0, 0, 0, .6);
+        background: secondaryColumnColor;
     }
     .compose-form {
         padding: 5px;
