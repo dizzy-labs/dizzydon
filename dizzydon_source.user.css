@@ -437,8 +437,15 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
 
     if rightAlign {
-        .columns-area {
+        /*.columns-area {
             flex-direction: row-reverse !important;
+        }*/
+        /*silly direction hack since firefox is buggy with row-reverse */
+        .columns-area {
+            direction: rtl !important;
+        }
+        * {
+            direction: initial;
         }
     }
     if dropShadows {
