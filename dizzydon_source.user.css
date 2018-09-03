@@ -83,11 +83,30 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         outline: 0;
         background: detailsColor;
     }
+    
+    .text-icon-button,
+    .column-header__button {
+        color: secondaryFontColor;
+    }
     .text-icon-button:active,
     .text-icon-button:focus,
     .text-icon-button:hover,
     .column-header__button:hover {
+        color: primaryFontColor;
+    }
+    .icon-button {
+        transition: all .1s;
         color: secondaryFontColor;
+    }
+    .icon-button:active,
+    .icon-button:focus,
+    .icon-button:hover {
+        color: primaryFontColor;
+    }
+    .icon-button.disabled {
+        color: rgba(0, 0, 0, .6);
+        cursor: default;
+        filter: none;
     }
     .column-link__badge,
     .column-inline-form,
@@ -184,20 +203,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .muted .status__display-name strong {
         color: secondaryFontColor;
     }
-    .icon-button {
-        transition: all .1s;
-        color: secondaryFontColor;
-    }
-    .icon-button:active,
-    .icon-button:focus,
-    .icon-button:hover {
-        color: secondaryFontColor;
-    }
-    .icon-button.disabled {
-        color: rgba(0, 0, 0, .6);
-        cursor: default;
-        filter: none;
-    }
+    
     .composer--options {
         background: primaryUiColor !important;
     }
@@ -308,11 +314,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .compose-form__buttons-wrapper .icon-button,{
         color: #fff1e8 !important;
         text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
-    }
-    .icon-button:active,
-    .icon-button:focus,
-    .icon-button:hover {
-        color: #5f574f;
     }
     .detailed-status {
         background: detailsColor;
