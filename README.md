@@ -9,6 +9,7 @@ A customizable userstyle for Mastodon
 * Supports vanilla, glitch-soc, and sleeping town front ends
 * Default theme based on pico-8 palette
 * Customizable colors and toggles for shadows and transparency
+* Nicer Show More/Less buttons on their own line
 
 <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-pink-reverse-columns.png" width="600px" alt="dizzydon with a lighter styling and reversed columns">
 
