@@ -20,7 +20,7 @@ The easiest way is to click this link to [install dizzydon](https://raw.githubus
 
 After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
 
-<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="200px" alt="dizzydon with a lighter styling and reversed columns">
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="200px" alt="config menu for dizzydon v2.2.1">
 
 # Updating
 Open the management page for stylus and click the refresh icon for the style
