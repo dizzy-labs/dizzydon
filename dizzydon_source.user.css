@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon
 @namespace      dizzy-labs
-@version        2.2.1
+@version        2.2.2
 @description    Redesign of Mastodon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -58,7 +58,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .dropdown-menu__item a:hover,
     .dropdown-menu__item a:focus {
         background: primaryUiColor !important;
-        text-shadow: 0 0 0.25em rgba(0,0,0,.75);
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, .75);
     }
     .composer--options--dropdown--content--item .fa-unlock-alt,
     .status__visibility-icon.fa-unlock-alt {
@@ -76,14 +76,14 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .button {
         background-color: secondaryUiColor !important;
-        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
         color: #fff1e8 !important;
     }
     .focusable:focus {
         outline: 0;
         background: secondaryColumnColor;
     }
-    
+
     .text-icon-button,
     .column-header__button {
         color: secondaryFontColor;
@@ -161,17 +161,17 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
 
     .column-header,
     .column-header__button,
-    .column-header>button,
+    .column-header > button,
     .compose-form .compose-form__buttons-wrapper,
     .column-header__back-button,
     .drawer--header,
     .drawer__header {
         background: primaryUiColor !important;
-        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
         color: #fff1e8 !important;
     }
     .compose-form__buttons-wrapper .icon-button {
-        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
     }
     .column {
         min-width: 260px !important;
@@ -203,7 +203,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .column-back-button,
     .column-header__back-button {
         background: primaryUiColor !important;
-        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
         color: #fff1e8 !important;
     }
     .detailed-status__action-bar,
@@ -217,7 +217,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .muted .status__display-name strong {
         color: secondaryFontColor;
     }
-    
+
     .composer--options {
         background: primaryUiColor !important;
     }
@@ -325,9 +325,10 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .compose-form__buttons .fa,
     .compose-form__buttons-wrapper .icon-buttons .fa,
     .compose-form__buttons .text-icon-button,
-    .compose-form__buttons-wrapper .icon-button,{
+    .compose-form__buttons-wrapper .icon-button,
+    {
         color: #fff1e8 !important;
-        text-shadow: 0 0 0.25em rgba(0,0,0,.25) !important;
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
     }
     .detailed-status,
     .focusable:focus .detailed-status__action-bar {
@@ -341,11 +342,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .status__content {
         color: primaryFontColor;
     }
-    .reply-indicator__content p, .status__content p {
+    .reply-indicator__content p,
+    .status__content p {
         margin-bottom: 0;
     }
     .status__content__spoiler,
-    .status__content.status__content--with-spoiler .status__content__text{
+    .status__content.status__content--with-spoiler .status__content__text {
         padding: 10px !important;
         padding-top: 18px !important;
         /*
@@ -368,7 +370,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         box-shadow: 0px 0px 4px 0px #000;
     }
     .status.collapsed .status__content:after {
-        background: linear-gradient(rgba(40,44,55,0), secondaryColumnColor);
+        background: linear-gradient(rgba(40, 44, 55, 0), secondaryColumnColor);
     }
     .media-gallery__item-thumbnail img {
         image-rendering: -webkit-optimize-contrast;
@@ -440,10 +442,26 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .compose-form .compose-form__modifiers {
         background: primaryFontColor;
     }
+
     .composer--upload_form,
     .compose-form .compose-form__modifiers .compose-form__upload-wrapper {
         color: primaryFontColor;
         background: rgba(0, 0, 0, .45);
+    }
+    .compose-form .compose-form__modifiers .compose-form__upload,
+    .composer--upload_form--item {
+        flex: 1 0 100%;
+    }
+    .compose-form .compose-form__modifiers .compose-form__upload__actions,
+    .composer--upload_form--actions,
+    .composer--upload_form--item > div input {
+        background: linear-gradient(180deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .65) 80%, transparent);
+        opacity: 1;
+    }
+    .compose-form .compose-form__modifiers .compose-form__upload-description,
+    .composer--upload_form--item > div input {
+        background: linear-gradient(0deg, rgba(0, 0, 0, .9), rgba(0, 0, 0, .65) 80%, transparent);
+        opacity: 1;
     }
     .composer--upload_form--item > div > .close {
         mix-blend-mode: difference;
@@ -507,14 +525,13 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         .column-header__back-button,
         .column-header,
         .column-header__button,
-        .column-header>button,
+        .column-header > button,
         .compose-form .compose-form__buttons-wrapper,
         .column-header__back-button,
         .drawer--header,
         .drawer__header,
         .composer--options .icon-button,
-        .composer--options .text-icon-button
-        .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter,
+        .composer--options .text-icon-button .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter,
         .compose-form__buttons .fa,
         .compose-form__buttons-wrapper .icon-buttons .fa,
         .compose-form__buttons .text-icon-button,
@@ -522,13 +539,13 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         .drawer--header a,
         .drawer__header a {
             color: #000 !important;
-            text-shadow: 0 0 0.25em rgba(255,255,255,.35) !important;
+            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
         }
     }
     if lightButtons {
         .button {
             color: #000 !important;
-            text-shadow: 0 0 0.25em rgba(255,255,255,.35) !important;
+            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
         }
     }
 }
