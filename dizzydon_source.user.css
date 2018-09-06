@@ -14,16 +14,15 @@
 @var            color    linkColor          "Font color for links"                 #c2c3c7
 @var            color    primaryUiColor     "Header colors"                        #1D2B53
 @var            color    secondaryUiColor   "Post button color"                    #7E2553
-@var            color    columnColor        "Column background color"              #24221e
-@var            color    secondaryColumnColor "Secondary column color"             #191715
-@var            color    detailsColor       "Color for open statuses"              #37322e
+@var            color    columnColor        "Main Column color"                    #24221e
+@var            color    secondaryColumnColor "Column color 2"                     #191715
+@var            color    detailsColor       "Column color 3"                       #37322e
 @var            color    backgroundColor    "Main background color"                #5f574f
 @var            checkbox lightHeaders       "Use dark font for headers"            0
 @var            checkbox lightButtons       "Use dark font for post button"        0
 @var            checkbox rightAlign         "Start columns on the right"           0
 @var            checkbox dropShadows        "Use drop-shadow filters"              1
 @var            checkbox columnShadows      "Use box-shadows on columns"           1
-@var            checkbox transparentColumns "Use semi-transparent columns"         0
 ==/UserStyle== */
 @-moz-document domain("sleeping.town"),
 domain("glitch.social"),
@@ -299,7 +298,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         margin: 0 0 -2px;
         border-radius: 4px 4px 0 0;
         padding: 10px;
-        background: rgba(0, 0, 0, .5);
+        background: detailsColor;
         color: secondaryFontColor;
     }
     .composer--reply > .content,
@@ -362,6 +361,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         font-size: 12px;
         margin-bottom: 0;
     }
+    .focusable:focus .status__content__spoiler-link,
     .muted .status__content__spoiler-link {
         background: detailsColor !important;
     }
@@ -513,11 +513,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     if columnShadows {
         .column {
             box-shadow: 3px 4px 9px 0px #000;
-        }
-    }
-    if transparentColumns {
-        .column {
-            background: rgba(0, 0, 0, .6);
         }
     }
     if lightHeaders {
