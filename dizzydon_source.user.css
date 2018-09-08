@@ -357,7 +357,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         width: 100% !important;
         font-size: .75rem;
         padding: 2px;
-        margin-bottom: -10px;
+        /*margin-bottom: -10px;*/
     }
     .status__action-bar {
         margin-top:20px /*this collapses with p margins so only affects toots containing show more buttons to give space from the button*/
