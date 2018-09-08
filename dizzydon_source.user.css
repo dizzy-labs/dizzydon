@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon
 @namespace      dizzy-labs
-@version        2.2.2
+@version        2.2.3
 @description    Redesign of Mastodon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -79,7 +79,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: #fff1e8 !important;
     }
     .focusable:focus {
-        outline: 0;
         background: secondaryColumnColor;
     }
 
@@ -110,7 +109,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .column-link__badge,
     .column-inline-form,
     .setting-text {
-        background: #5f574f;
+        background: secondaryColumnColor;
         color: primaryFontColor;
     }
 
@@ -144,7 +143,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .drawer--header,
     .drawer__header {
-        font-size: 16px;
+        font-size: 1rem;
         border-radius: 6px;
     }
     .drawer--header a,
@@ -272,6 +271,8 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .column-link {
         color: primaryFontColor !important;
         background: detailsColor;
+        border-bottom: 1px solid secondaryColumnColor;
+        border-top: 1px solid secondaryColumnColor;
     }
     .column-link:hover {
         background: secondaryColumnColor;
@@ -317,7 +318,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
         color: #fff1e8 !important;
-        font-size: 14px;
+        font-size: .875rem;
     }
     .compose-form__buttons .fa,
     .compose-form__buttons-wrapper .icon-buttons .fa,
@@ -343,12 +344,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .reply-indicator__content p,
     .status__content p {
-        margin-bottom: 0;
+        /*margin-bottom: 0;*/
     }
     .status__content__spoiler,
     .status__content.status__content--with-spoiler .status__content__text {
         padding: 10px !important;
-        padding-top: 18px !important;
+        padding-top: 0px !important;
         /*
         background: detailsColor !important;
         border-radius: 0 0 8px 8px;*/
@@ -358,8 +359,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         background: secondaryColumnColor !important;
         color: primaryFontColor !important;
         width: 100% !important;
-        font-size: 12px;
-        margin-bottom: 0;
+        font-size: .75rem;
+        padding: 2px;
+        margin-bottom: -10px;
+    }
+    .status__action-bar {
+        margin-top:20px /*this collapses with p margins so only affects toots containing show more buttons to give space from the button*/
     }
     .focusable:focus .status__content__spoiler-link,
     .muted .status__content__spoiler-link {
@@ -468,13 +473,13 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: primaryFontColor;
     }
     .composer--publisher > .count {
-        font-size: 14px;
+        font-size: .875rem;
         font-weight: 500;
     }
 
     .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
         color: #fff1e8 !important;
-        font-size: 14px;
+        font-size: .875rem;
     }
     .composer--upload_form--item > div input::placeholder {
         opacity: .9;
