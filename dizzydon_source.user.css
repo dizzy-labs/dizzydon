@@ -342,10 +342,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .status__content {
         color: primaryFontColor;
     }
-    .reply-indicator__content p,
-    .status__content p {
-        /*margin-bottom: 0;*/
-    }
     .status__content__spoiler,
     .status__content.status__content--with-spoiler .status__content__text {
         padding: 10px !important;
