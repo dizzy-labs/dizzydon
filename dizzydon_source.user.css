@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon
 @namespace      dizzy-labs
-@version        2.2.3
+@version        2.3.0
 @description    Redesign of Mastodon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -21,8 +21,13 @@
 @var            checkbox lightHeaders       "Use dark font for headers"            0
 @var            checkbox lightButtons       "Use dark font for post button"        0
 @var            checkbox rightAlign         "Start columns on the right"           0
-@var            checkbox dropShadows        "Use drop-shadow filters"              1
+@var            checkbox noReplyCount       "Hide reply count"                     1
 @var            checkbox columnShadows      "Use box-shadows on columns"           1
+@var            checkbox dropShadows        "Use drop-shadow filters"              1
+@var            checkbox dropShadowsHeaders "Use drop-shadow on column headers"    0
+@var            checkbox dropShadowsDrawer  "Use drop-shadow on drawer area"       1
+@var            checkbox dropShadowsButtons "Use drop-shadow on icon buttons"      1
+
 ==/UserStyle== */
 @-moz-document domain("sleeping.town"),
 domain("glitch.social"),
@@ -34,29 +39,13 @@ domain("chitter.xyz") {
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */
-    body,
-    .icon-button,
-    .text-icon-button,
-    .getting-started p,
-    .status-card__title,
-    .composer--upload_form--item > div input,
-    .column-header__button,
-    .account__display-name strong,
-    .status__display-name strong {
-        color: primaryFontColor;
-    }
+    /* Core Rules */
     a {
         color: linkColor !important;
     }
-    .dropdown-menu {
-        background: secondaryColumnColor !important;
-    }
-    .dropdown-menu__item a {
-        background: detailsColor !important;
-    }
+
     .dropdown-menu__item a:hover,
     .dropdown-menu__item a:focus {
-        background: primaryUiColor !important;
         text-shadow: 0 0 0.25em rgba(0, 0, 0, .75);
     }
     .composer--options--dropdown--content--item .fa-unlock-alt,
@@ -73,44 +62,22 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .account__header__fields a {
         color: #29adff;
     }
-    .button {
-        background-color: secondaryUiColor !important;
+    .button,
+    .btn,
+    .block-button {
         text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
         color: #fff1e8 !important;
     }
-    .focusable:focus {
-        background: secondaryColumnColor;
-    }
-
-    .text-icon-button,
-    .column-header__button {
-        color: secondaryFontColor;
-    }
-    .text-icon-button:active,
-    .text-icon-button:focus,
-    .text-icon-button:hover,
-    .column-header__button:hover {
-        color: primaryFontColor;
-    }
     .icon-button {
         transition: all .1s;
-        color: secondaryFontColor;
-    }
-    .icon-button:active,
-    .icon-button:focus,
-    .icon-button:hover {
-        color: primaryFontColor;
     }
     .icon-button.disabled {
         color: rgba(0, 0, 0, .6);
         cursor: default;
         filter: none;
     }
-    .column-link__badge,
-    .column-inline-form,
-    .setting-text {
-        background: secondaryColumnColor;
-        color: primaryFontColor;
+    .reduce-motion .icon-button .fa-retweet {
+        background-image: none;
     }
 
     .drawer {
@@ -118,22 +85,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         padding-bottom: 0;
         flex: 0 0 280px;
     }
-    .drawer__tab {
-        color: primaryFontColor;
-    }
     .column,
     .drawer {
         padding: 0 !important;
         margin: 10px 5px 0 5px;
         overflow: auto;
         border-radius: 6px;
-    }
-    ::-webkit-scrollbar-track {
-        background: detailsColor !important;
-        border: 1px solid secondaryColumnColor;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: secondaryColumnColor !important;
     }
     .drawer__inner__mastodon {
         background: transparent none no-repeat bottom/100% auto;
@@ -164,7 +121,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .column-header__back-button,
     .drawer--header,
     .drawer__header {
-        background: primaryUiColor !important;
         text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
         color: #fff1e8 !important;
     }
@@ -176,11 +132,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         max-width: 400px !important;
         flex: 1 1 auto !important;
         filter: initial;
-        background: columnColor;
     }
     .empty-column-indicator,
     .error-column {
-        color: secondaryFontColor;
         background: none;
     }
     .columns-area {
@@ -200,7 +154,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .column-back-button,
     .column-header__back-button {
-        background: primaryUiColor !important;
         text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
         color: #fff1e8 !important;
     }
@@ -208,30 +161,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .notification-follow,
     .status {
         border-bottom-width: 8px;
-        border-bottom-color: secondaryColumnColor;
-    }
-    .muted .status__content a,
-    .muted .status__content p,
-    .muted .status__display-name strong {
-        color: secondaryFontColor;
-    }
-
-    .composer--options {
-        background: primaryUiColor !important;
-    }
-    .ui {
-        background-color: backgroundColor;
-    }
-    .drawer--search input,
-    .search__input {
-        color: #000;
-        background: #fff1e8;
-    }
-    .drawer--search > .icon {
-        color: #000;
-    }
-    .search__icon .fa-times-circle {
-        color: #000;
     }
     .drawer--search input:focus,
     .search__input:focus {
@@ -249,7 +178,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .search-results {
         background: rgba(0, 0, 0, .9);
-        color: secondaryFontColor;
         box-shadow: 0px 3px 6px 0px #000;
     }
     .search-results__header {
@@ -263,29 +191,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         padding: 10px;
         border-bottom: 1px solid #393f4f;
     }
-    .column-subheading,
-    .getting-started {
-        background: secondaryColumnColor !important;
-        color: secondaryFontColor;
-    }
-    .column-link {
-        color: primaryFontColor !important;
-        background: detailsColor;
-        border-bottom: 1px solid secondaryColumnColor;
-        border-top: 1px solid secondaryColumnColor;
-    }
-    .column-link:hover {
-        background: secondaryColumnColor;
-    }
-    .getting-started {
-        color: secondaryFontColor;
-    }
     .getting-started__wrapper,
     .getting_started {
         background: none;
-    }
-    .getting-started__footer {
-        background: secondaryColumnColor;
     }
     .composer--spoiler input,
     .composer--textarea > label .textarea,
@@ -299,14 +207,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         margin: 0 0 -2px;
         border-radius: 4px 4px 0 0;
         padding: 10px;
-        background: detailsColor;
-        color: secondaryFontColor;
-    }
-    .composer--reply > .content,
-    .reply-indicator__header,
-    .reply-indicator__content,
-    .reply-indicator__display-name {
-        color: secondaryFontColor;
     }
     .compose-form .spoiler-input.spoiler-input--visible {
         margin-top: 16px;
@@ -330,48 +230,27 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: #fff1e8 !important;
         text-shadow: 0 0 0.25em rgba(0, 0, 0, .25) !important;
     }
-    .detailed-status,
-    .focusable:focus .detailed-status__action-bar {
-        background: detailsColor;
-    }
     .focusable:focus .detailed-status,
     .detailed-status__action-bar {
-        background: secondaryColumnColor;
         border-top: none;
-    }
-    .status__content {
-        color: primaryFontColor;
     }
     .status__content__spoiler,
     .status__content.status__content--with-spoiler .status__content__text {
         padding: 10px !important;
         padding-top: 0px !important;
-        /*
-        background: detailsColor !important;
-        border-radius: 0 0 8px 8px;*/
     }
     .status__content__spoiler-link {
         transition: all .1s;
-        background: secondaryColumnColor !important;
-        color: primaryFontColor !important;
         width: 100% !important;
         font-size: .75rem;
         padding: 2px;
-        /*margin-bottom: -10px;*/
     }
     .status__action-bar {
-        margin-top:20px /*this collapses with p margins so only affects toots containing show more buttons to give space from the button*/
-    }
-    .focusable:focus .status__content__spoiler-link,
-    .muted .status__content__spoiler-link {
-        background: detailsColor !important;
+        margin-top: 20px/*this collapses with p margins so only affects toots containing show more buttons to give space from the button*/
     }
     .status__content .status__content__spoiler-link:hover {
         text-decoration: none;
         box-shadow: 0px 0px 4px 0px #000;
-    }
-    .status.collapsed .status__content:after {
-        background: linear-gradient(rgba(40, 44, 55, 0), secondaryColumnColor);
     }
     .media-gallery__item-thumbnail img {
         image-rendering: -webkit-optimize-contrast;
@@ -381,33 +260,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .account__header,
     .account__header__wrapper {
         background-color: rgba(0, 0, 0, .3);
-    }
-    .account__header .account__header__fields dl {
-        border-top: 1px solid secondaryColumnColor;
-        border-bottom: 1px solid secondaryColumnColor;
-    }
-    .account__header .account__header__fields dt {
-        color: primaryFontColor;
-        background: secondaryColumnColor;
-    }
-    .account__header .account__header__fields dd {
-        color: primaryFontColor;
-        background: detailsColor;
-    }
-    .account__disclaimer {
-        color: primaryFontColor;
-    }
-    .account__section-headline {
-        background: secondaryColumnColor;
-    }
-    .account__action-bar__tab > span {
-        color: primaryFontColor;
-    }
-    .account__action-bar__tab strong,
-    .status__prepend,
-    .status__prepend .status__display-name strong,
-    .status__relative-time {
-        color: secondaryFontColor;
     }
     .account--panel {
         background: #1d1a17;
@@ -420,33 +272,14 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .account--panel .fa-times {
         color: #ff004d;
     }
-    .status.status-direct {
-        background: detailsColor;
-        color: primaryFontColor;
-    }
     .status-card {
         border: 1px solid #000;
-        background: detailsColor;
-    }
-    .status-card:hover,
-    a.status-card:hover {
-        background: secondaryColumnColor;
-    }
-    .navigation-bar,
-    .drawer--account {
-        color: secondaryFontColor;
-        background: secondaryColumnColor;
     }
     .compose-form {
         padding: 5px;
     }
-    .compose-form .compose-form__modifiers {
-        background: primaryFontColor;
-    }
-
     .composer--upload_form,
     .compose-form .compose-form__modifiers .compose-form__upload-wrapper {
-        color: primaryFontColor;
         background: rgba(0, 0, 0, .45);
     }
     .compose-form .compose-form__modifiers .compose-form__upload,
@@ -466,7 +299,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .composer--upload_form--item > div > .close {
         mix-blend-mode: difference;
-        color: primaryFontColor;
     }
     .composer--publisher > .count {
         font-size: .875rem;
@@ -479,10 +311,8 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .composer--upload_form--item > div input::placeholder {
         opacity: .9;
-        color: secondaryFontColor;
     }
     input::placeholder {
-        color: #000;
         opacity: .75;
     }
 
@@ -499,16 +329,24 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         }
     }
     if dropShadows {
-        .drawer--header,
-        .drawer__header,
-        .column-header,
-        .drawer > .contents,
-        .composer,
-        .compose-form {
-            filter: drop-shadow(0px 3px 3px #000);
+        if dropShadowsHeaders {
+            .column-header {
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .5));
+            }
         }
-        .icon-button {
-            filter: drop-shadow(1px 1px 0px #000);
+        if dropShadowsDrawer {
+            .drawer--header,
+            .drawer__header,
+            .drawer > .contents,
+            .composer,
+            .compose-form {
+                filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, .5));
+            }
+        }
+        if dropShadowsButtons {
+            .icon-button {
+                filter: drop-shadow(1px 2px 0px rgba(0, 0, 0, .25)) drop-shadow(-1px -1px 0px rgba(0, 0, 0, .25));
+            }
         }
     }
     if columnShadows {
@@ -517,11 +355,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         }
     }
     if lightHeaders {
-        .column-back-button,
-        .column-header__back-button,
-        .column-header,
-        .column-header__button,
-        .column-header > button,
+
         .compose-form .compose-form__buttons-wrapper,
         .column-header__back-button,
         .drawer--header,
@@ -539,9 +373,319 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         }
     }
     if lightButtons {
-        .button {
+        .button,
+        .btn,
+        .block-button {
             color: #000 !important;
             text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
         }
+    }
+    if noReplyCount {
+        .status__action-bar__counter__label {
+            display: none !important;
+        }
+    }
+    /*-------------------- Color Themeing Rules --------------------*/
+    body,
+    .icon-button,
+    .text-icon-button,
+    .getting-started p,
+    .status-card__title,
+    .composer--upload_form--item > div input,
+    .column-header__button,
+    .account__display-name strong,
+    .status__display-name strong {
+        color: primaryFontColor;
+    }
+    body.admin {
+        background-color: secondaryColumnColor;
+    }
+
+    .admin-wrapper .sidebar-wrapper a,
+    .admin-wrapper .content h2,
+    #account_display_name,
+    #account_note,
+    .simple_form .input.with_label .label_input > label,
+    .simple_form .input.with_block_label > label,
+    .simple_form .string.optional,
+    .admin-wrapper .content h6 {
+        color: primaryFontColor !important;
+    }
+    .simple_form .hint,
+    .admin-wrapper .content .muted-hint {
+        color: secondaryFontColor !important;
+    }
+
+    .admin-wrapper .sidebar-wrapper {
+        background-color: detailsColor;
+    }
+    .admin-wrapper .sidebar ul ul {
+        background-color: columnColor;
+    }
+    .admin-wrapper .sidebar ul ul a.selected {
+        background-color: secondaryColumnColor;
+    }
+
+    .glitch.local-settings__navigation {
+        background-color: backgroundColor;
+    }
+    .glitch.local-settings__navigation__item {
+        background-color: secondaryColumnColor;
+        color: primaryFontColor !important;
+    }
+    .glitch.local-settings__navigation__item:hover {
+        background-color: columnColor;
+    }
+    .glitch.local-settings__navigation__item.active {
+        background-color: detailsColor;
+    }
+    .glitch.local-settings__navigation__item.close {
+        background-color: secondaryUiColor !important;
+    }
+    .glitch.local-settings__page {
+        background-color: detailsColor;
+        color: primaryFontColor;
+    }
+    tbody {
+        border: 1px solid detailsColor;
+    }
+    th {
+        background-color: detailsColor !important;
+    }
+    tr > td {
+        background-color: secondaryColumnColor !important;
+    }
+    tr:nth-child(2n+1) > td {
+        background-color: columnColor !important;
+    }
+
+    .button,
+    .btn,
+    .block-button {
+        background-color: secondaryUiColor !important;
+    }
+    .dropdown-menu {
+        background: secondaryColumnColor !important;
+    }
+    .dropdown-menu__item a {
+        background: detailsColor !important;
+    }
+    .dropdown-menu__item a:hover,
+    .dropdown-menu__item a:focus {
+        background: primaryUiColor !important;
+    }
+    .focusable:focus {
+        background: secondaryColumnColor;
+    }
+
+    .text-icon-button,
+    .column-header__button {
+        color: secondaryFontColor;
+    }
+    .text-icon-button:active,
+    .text-icon-button:focus,
+    .text-icon-button:hover,
+    .column-header__button:hover {
+        color: primaryFontColor;
+    }
+    .icon-button {
+        color: secondaryFontColor;
+    }
+    .icon-button:active,
+    .icon-button:focus,
+    .icon-button:hover {
+        color: primaryFontColor;
+    }
+    .reduce-motion .icon-button .fa-retweet {
+        background-image: none;
+        color: secondaryFontColor;
+    }
+    .column-link__badge,
+    .column-inline-form,
+    .setting-text {
+        color: primaryFontColor;
+    }
+
+    .drawer__tab {
+        color: primaryFontColor;
+    }
+    ::-webkit-scrollbar-track {
+        background: detailsColor !important;
+        border: 1px solid secondaryColumnColor;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: secondaryColumnColor !important;
+    }
+    .column-header,
+    .column-header__button,
+    .column-header > button,
+    .compose-form .compose-form__buttons-wrapper,
+    .column-header__back-button,
+    .drawer--header,
+    .drawer__header {
+        background: primaryUiColor !important;
+    }
+    .column {
+        background: columnColor;
+    }
+    .empty-column-indicator,
+    .error-column {
+        color: secondaryFontColor;
+    }
+    .column-back-button,
+    .column-header__back-button {
+        background: primaryUiColor !important;
+    }
+    .detailed-status__action-bar,
+    .notification-follow,
+    .status {
+        border-bottom-color: secondaryColumnColor;
+    }
+    .muted .status__content a,
+    .muted .status__content p,
+    .muted .status__display-name strong {
+        color: secondaryFontColor;
+    }
+
+    .composer--options {
+        background: primaryUiColor !important;
+    }
+    .ui {
+        background-color: backgroundColor;
+    }
+    .drawer--search input,
+    .search__input {
+        color: primaryFontColor !important;
+        background: columnColor !important;
+    }
+    .drawer--search > .icon {
+        color: primaryFontColor !important;
+    }
+    .search__icon .fa-times-circle {
+        color: primaryFontColor !important;
+    }
+    .search-results {
+        color: secondaryFontColor;
+    }
+    .column-subheading,
+    .getting-started {
+        background: secondaryColumnColor !important;
+        color: secondaryFontColor;
+    }
+    .column-link {
+        color: primaryFontColor !important;
+        background: detailsColor;
+        border-bottom: 1px solid secondaryColumnColor;
+        border-top: 1px solid secondaryColumnColor;
+    }
+    .column-link__badge,
+    .column-subheading {
+        background-color: secondaryColumnColor;
+        color: primaryFontColor;
+    }
+    .column-link:hover {
+        background: secondaryColumnColor;
+    }
+    .getting-started {
+        color: secondaryFontColor;
+    }
+    .getting-started__wrapper,
+    .getting_started {
+        background: none;
+    }
+    .getting-started__footer {
+        background: secondaryColumnColor;
+    }
+    .composer--reply,
+    .reply-indicator {
+        background: detailsColor;
+        color: secondaryFontColor;
+    }
+    .composer--reply > .content,
+    .reply-indicator__header,
+    .reply-indicator__content,
+    .reply-indicator__display-name {
+        color: secondaryFontColor;
+    }
+    .detailed-status,
+    .focusable:focus .detailed-status__action-bar {
+        background: detailsColor;
+    }
+    .focusable:focus .detailed-status,
+    .detailed-status__action-bar {
+        background: secondaryColumnColor;
+    }
+    .status__content {
+        color: primaryFontColor;
+    }
+    .status__content__spoiler-link {
+        background: secondaryColumnColor !important;
+        color: primaryFontColor !important;
+    }
+    .focusable:focus .status__content__spoiler-link,
+    .muted .status__content__spoiler-link {
+        background: detailsColor !important;
+    }
+    .status.collapsed .status__content:after {
+        background: linear-gradient(rgba(40, 44, 55, 0), secondaryColumnColor);
+    }
+    .account__header .account__header__fields dt {
+        color: primaryFontColor;
+        background: secondaryColumnColor;
+    }
+    .account__header .account__header__fields dd {
+        color: primaryFontColor;
+        background: detailsColor;
+    }
+    .account__disclaimer {
+        color: primaryFontColor;
+    }
+    .account__section-headline {
+        background: secondaryColumnColor;
+    }
+    .account__action-bar,
+    .account__action-bar__tab,
+    .account__section-headline,
+    .account__header .account__header__fields dl {
+        border-color: secondaryColumnColor;
+    }
+    .account__action-bar__tab > span {
+        color: primaryFontColor;
+    }
+    .account__action-bar__tab strong,
+    .status__prepend,
+    .status__prepend .status__display-name strong,
+    .status__relative-time {
+        color: secondaryFontColor;
+    }
+    .status.status-direct {
+        background: detailsColor;
+        color: primaryFontColor;
+    }
+    .status-card {
+        background: detailsColor;
+    }
+    .status-card:hover,
+    a.status-card:hover {
+        background: secondaryColumnColor;
+    }
+    .navigation-bar,
+    .drawer--account {
+        color: secondaryFontColor;
+        background: secondaryColumnColor;
+    }
+    .compose-form .compose-form__modifiers {
+        background: primaryFontColor;
+    }
+
+    .composer--upload_form,
+    .compose-form .compose-form__modifiers .compose-form__upload-wrapper {
+        color: primaryFontColor;
+    }
+    .composer--upload_form--item > div > .close {
+        color: primaryFontColor;
+    }
+    .composer--upload_form--item > div input::placeholder {
+        color: secondaryFontColor;
     }
 }
