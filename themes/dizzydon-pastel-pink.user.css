@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon-pastel-pink
 @namespace      dizzy-labs
-@version        1.0.0
+@version        1.0.1
 @description    A theme style for use dizzydon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -29,6 +29,11 @@ domain("chitter.xyz") {
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */
+    a {
+        color: linkColor !important;
+    }
+
+    /*-------------------- Color Themeing Rules --------------------*/
     body,
     .icon-button,
     .text-icon-button,
@@ -40,8 +45,72 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .status__display-name strong {
         color: primaryFontColor;
     }
-    a {
-        color: linkColor !important;
+    body.admin {
+        background-color: secondaryColumnColor;
+    }
+
+    .admin-wrapper .sidebar-wrapper a,
+    .admin-wrapper .content h2,
+    #account_display_name,
+    #account_note,
+    .simple_form .input.with_label .label_input > label,
+    .simple_form .input.with_block_label > label,
+    .simple_form .string.optional,
+    .admin-wrapper .content h6 {
+        color: primaryFontColor !important;
+    }
+    .simple_form .hint,
+    .admin-wrapper .content .muted-hint {
+        color: secondaryFontColor !important;
+    }
+
+    .admin-wrapper .sidebar-wrapper {
+        background-color: detailsColor;
+    }
+    .admin-wrapper .sidebar ul ul {
+        background-color: columnColor;
+    }
+    .admin-wrapper .sidebar ul ul a.selected {
+        background-color: secondaryColumnColor;
+    }
+
+    .glitch.local-settings__navigation {
+        background-color: backgroundColor;
+    }
+    .glitch.local-settings__navigation__item {
+        background-color: secondaryColumnColor;
+        color: primaryFontColor !important;
+    }
+    .glitch.local-settings__navigation__item:hover {
+        background-color: columnColor;
+    }
+    .glitch.local-settings__navigation__item.active {
+        background-color: detailsColor;
+    }
+    .glitch.local-settings__navigation__item.close {
+        background-color: secondaryUiColor !important;
+    }
+    .glitch.local-settings__page {
+        background-color: detailsColor;
+        color: primaryFontColor;
+    }
+    tbody {
+        border: 1px solid detailsColor;
+    }
+    th {
+        background-color: detailsColor !important;
+    }
+    tr > td {
+        background-color: secondaryColumnColor !important;
+    }
+    tr:nth-child(2n+1) > td {
+        background-color: columnColor !important;
+    }
+
+    .button,
+    .btn,
+    .block-button {
+        background-color: secondaryUiColor !important;
     }
     .dropdown-menu {
         background: secondaryColumnColor !important;
@@ -74,6 +143,10 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .icon-button:focus,
     .icon-button:hover {
         color: primaryFontColor;
+    }
+    .reduce-motion .icon-button .fa-retweet {
+        background-image: none;
+        color: secondaryFontColor;
     }
     .column-link__badge,
     .column-inline-form,
@@ -128,6 +201,17 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .ui {
         background-color: backgroundColor;
     }
+    .drawer--search input,
+    .search__input {
+        color: primaryFontColor !important;
+        background: columnColor !important;
+    }
+    .drawer--search > .icon {
+        color: primaryFontColor !important;
+    }
+    .search__icon .fa-times-circle {
+        color: primaryFontColor !important;
+    }
     .search-results {
         color: secondaryFontColor;
     }
@@ -139,6 +223,13 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .column-link {
         color: primaryFontColor !important;
         background: detailsColor;
+        border-bottom: 1px solid secondaryColumnColor;
+        border-top: 1px solid secondaryColumnColor;
+    }
+    .column-link__badge,
+    .column-subheading {
+        background-color: secondaryColumnColor;
+        color: primaryFontColor;
     }
     .column-link:hover {
         background: secondaryColumnColor;
@@ -186,10 +277,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .status.collapsed .status__content:after {
         background: linear-gradient(rgba(40, 44, 55, 0), secondaryColumnColor);
     }
-    .account__header .account__header__fields dl {
-        border-top: 1px solid secondaryColumnColor;
-        border-bottom: 1px solid secondaryColumnColor;
-    }
     .account__header .account__header__fields dt {
         color: primaryFontColor;
         background: secondaryColumnColor;
@@ -203,6 +290,12 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .account__section-headline {
         background: secondaryColumnColor;
+    }
+    .account__action-bar,
+    .account__action-bar__tab,
+    .account__section-headline,
+    .account__header .account__header__fields dl {
+        border-color: secondaryColumnColor;
     }
     .account__action-bar__tab > span {
         color: primaryFontColor;
