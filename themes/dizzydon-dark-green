@@ -1,0 +1,332 @@
+/* ==UserStyle==
+@name           Dizzydon-green
+@namespace      dizzy-labs
+@version        2.2.2
+@description    A theme style for use dizzydon
+@author         dizzy-labs
+@homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
+@supportURL     https://github.com/dizzy-labs/mastodon-userstyle/issues
+@license        CC BY-NC-SA
+@preprocessor   stylus
+
+@var            color    primaryFontColor   "Primary font color"                   #ffffbe
+@var            color    secondaryFontColor "Secondary,lower contrast, font color" #e6e68c
+@var            color    linkColor          "Font color for links"                 #e1a314
+@var            color    primaryUiColor     "Header colors"                        #3e4f41
+@var            color    secondaryUiColor   "Post button color"                    #915f00
+@var            color    columnColor        "Main Column color"                    #242d24
+@var            color    secondaryColumnColor "Column color 2"                     #121c00
+@var            color    detailsColor       "Column color 3"                       #1f3500
+@var            color    backgroundColor    "Main background color"                #625e52
+==/UserStyle== */
+@-moz-document domain("sleeping.town"),
+domain("glitch.social"),
+domain("cybre.space"),
+domain("mastodon.social"),
+domain("toot.cat"),
+domain("botsin.space"),
+domain("chitter.xyz") {
+    /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
+quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
+*/
+    body,
+    .icon-button,
+    .text-icon-button,
+    .getting-started p,
+    .status-card__title,
+    .composer--upload_form--item > div input,
+    .column-header__button,
+    .account__display-name strong,
+    .status__display-name strong {
+        color: primaryFontColor;
+    }
+    a {
+        color: linkColor !important;
+    }
+    .dropdown-menu {
+        background: secondaryColumnColor !important;
+    }
+    .dropdown-menu__item a {
+        background: detailsColor !important;
+    }
+    .dropdown-menu__item a:hover,
+    .dropdown-menu__item a:focus {
+        background: primaryUiColor !important;
+    }
+    .composer--options--dropdown--content--item .fa-unlock-alt,
+    .status__visibility-icon.fa-unlock-alt {
+        color: #008751;
+    }
+    .notification__favourite-icon-wrapper .fa.star-icon,
+    .star-icon.active {
+        color: #ffec27 !important;
+    }
+    .composer--options--dropdown--content--item .fa-globe,
+    .status__visibility-icon.fa-globe,
+    .column-header > .column-header__back-button,
+    .account__header__fields a {
+        color: #dd6600;
+    }
+    .button {
+        background-color: secondaryUiColor !important;
+        color: #ffff99 !important;
+    }
+    .focusable:focus {
+        background: secondaryColumnColor;
+    }
+
+    .text-icon-button,
+    .column-header__button {
+        color: secondaryFontColor;
+    }
+    .text-icon-button:active,
+    .text-icon-button:focus,
+    .text-icon-button:hover,
+    .column-header__button:hover {
+        color: primaryFontColor;
+    }
+    .icon-button {
+        color: secondaryFontColor;
+    }
+    .icon-button:active,
+    .icon-button:focus,
+    .icon-button:hover {
+        color: primaryFontColor;
+    }
+    .icon-button.disabled {
+        color: rgba(0, 0, 0, .6);
+    }
+    .column-link__badge,
+    .column-inline-form,
+    .setting-text {
+        background: #5f574f;
+        color: primaryFontColor;
+    }
+
+    .drawer__tab {
+        color: primaryFontColor;
+    }
+    ::-webkit-scrollbar-track {
+        background: detailsColor !important;
+        border: 1px solid secondaryColumnColor;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: secondaryColumnColor !important;
+    }
+    .drawer--header a,
+    .drawer__header a {
+        color: #ffffbe !important;
+    }
+    .column-header,
+    .column-header__button,
+    .column-header > button,
+    .compose-form .compose-form__buttons-wrapper,
+    .column-header__back-button,
+    .drawer--header,
+    .drawer__header {
+        background: primaryUiColor !important;
+        color: #ffffbe !important;
+    }
+    .column {
+        background: columnColor;
+    }
+    .empty-column-indicator,
+    .error-column {
+        color: secondaryFontColor;
+    }
+    .column-back-button,
+    .column-header__back-button {
+        background: primaryUiColor !important;
+        color: #ffffbe !important;
+    }
+    .detailed-status__action-bar,
+    .notification-follow,
+    .status {
+        border-bottom-color: secondaryColumnColor;
+    }
+    .muted .status__content a,
+    .muted .status__content p,
+    .muted .status__display-name strong {
+        color: secondaryFontColor;
+    }
+
+    .composer--options {
+        background: primaryUiColor !important;
+    }
+    .ui {
+        background-color: backgroundColor;
+    }
+    .drawer--search input,
+    .search__input {
+        color: #000;
+        background: #ffffbe;
+    }
+    .drawer--search > .icon {
+        color: #000;
+    }
+    .search__icon .fa-times-circle {
+        color: #000;
+    }
+    .drawer--search input:focus,
+    .search__input:focus {
+        background: #ffffbe;
+    }
+    .search-popout {
+        background: #ffffbe;
+    }
+    .search-popout > * {
+        color: #5f574f;
+    }
+    .search-popout h4,
+    .search-popout em {
+        color: #000;
+    }
+    .search-results {
+        color: secondaryFontColor;
+    }
+    .search-results__header {
+        color: inherit;
+        background: #000;
+    }
+    .account {
+        border-bottom: 1px solid #393f4f;
+    }
+    .column-subheading,
+    .getting-started {
+        background: secondaryColumnColor !important;
+        color: secondaryFontColor;
+    }
+    .column-link {
+        color: primaryFontColor !important;
+        background: detailsColor;
+    }
+    .column-link:hover {
+        background: secondaryColumnColor;
+    }
+    .getting-started {
+        color: secondaryFontColor;
+    }
+    .getting-started__wrapper,
+    .getting_started {
+        background: none;
+    }
+    .getting-started__footer {
+        background: secondaryColumnColor;
+    }
+    .composer--spoiler input,
+    .composer--textarea > label .textarea,
+    .compose-form .autosuggest-textarea__textarea,
+    .compose-form .spoiler-input__input {
+        background: #ffffbe;
+        color: #000;
+    }
+    .composer--reply,
+    .reply-indicator {
+        background: detailsColor;
+        color: secondaryFontColor;
+    }
+    .composer--reply > .content,
+    .reply-indicator__header,
+    .reply-indicator__content,
+    .reply-indicator__display-name {
+        color: secondaryFontColor;
+    }
+    .composer--options .icon-button,
+    .composer--options .text-icon-button {
+        color: #ffffbe !important;
+    }
+    .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
+        color: #ffffbe !important;
+    }
+    .compose-form__buttons .fa,
+    .compose-form__buttons-wrapper .icon-buttons .fa,
+    .compose-form__buttons .fa,
+    .compose-form__buttons-wrapper .icon-buttons .fa,
+    .compose-form__buttons .text-icon-button,
+    .compose-form__buttons-wrapper .icon-button,
+    {
+        color: #ffffbe !important;
+    }
+    .detailed-status,
+    .focusable:focus .detailed-status__action-bar {
+        background: detailsColor;
+    }
+    .focusable:focus .detailed-status,
+    .detailed-status__action-bar {
+        background: secondaryColumnColor;
+    }
+    .status__content {
+        color: primaryFontColor;
+    }
+    .status__content__spoiler-link {
+        background: secondaryColumnColor !important;
+        color: primaryFontColor !important;
+    }
+    .focusable:focus .status__content__spoiler-link,
+    .muted .status__content__spoiler-link {
+        background: detailsColor !important;
+    }
+    .status.collapsed .status__content:after {
+        background: linear-gradient(rgba(40, 44, 55, 0), secondaryColumnColor);
+    }
+    .account__header .account__header__fields dl {
+        border-top: 1px solid secondaryColumnColor;
+        border-bottom: 1px solid secondaryColumnColor;
+    }
+    .account__header .account__header__fields dt {
+        color: primaryFontColor;
+        background: secondaryColumnColor;
+    }
+    .account__header .account__header__fields dd {
+        color: primaryFontColor;
+        background: detailsColor;
+    }
+    .account__disclaimer {
+        color: primaryFontColor;
+    }
+    .account__section-headline {
+        background: secondaryColumnColor;
+    }
+    .account__action-bar__tab > span {
+        color: primaryFontColor;
+    }
+    .account__action-bar__tab strong,
+    .status__prepend,
+    .status__prepend .status__display-name strong,
+    .status__relative-time {
+        color: secondaryFontColor;
+    }
+    .status.status-direct {
+        background: detailsColor;
+        color: primaryFontColor;
+    }
+    .status-card {
+        background: detailsColor;
+    }
+    .status-card:hover,
+    a.status-card:hover {
+        background: secondaryColumnColor;
+    }
+    .navigation-bar,
+    .drawer--account {
+        color: secondaryFontColor;
+        background: secondaryColumnColor;
+    }
+    .compose-form .compose-form__modifiers {
+        background: primaryFontColor;
+    }
+
+    .composer--upload_form,
+    .compose-form .compose-form__modifiers .compose-form__upload-wrapper {
+        color: primaryFontColor;
+    }
+    .composer--upload_form--item > div > .close {
+        color: primaryFontColor;
+    }
+    .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter {
+        color: #ffffbe !important;
+    }
+    .composer--upload_form--item > div input::placeholder {
+        color: secondaryFontColor;
+    }
+}
