@@ -1,0 +1,246 @@
+/* ==UserStyle==
+@name           Dizzydon-pastel-pink
+@namespace      dizzy-labs
+@version        1.0.0
+@description    A theme style for use dizzydon
+@author         dizzy-labs
+@homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
+@supportURL     https://github.com/dizzy-labs/mastodon-userstyle/issues
+@license        CC BY-NC-SA
+@preprocessor   stylus
+
+@var            color    primaryFontColor   "Primary font color"                   #fff1e8
+@var            color    secondaryFontColor "Secondary,lower contrast, font color" #c8b2c3
+@var            color    linkColor          "Font color for links"                 #ffb3ec
+@var            color    primaryUiColor     "Header colors"                        #7996f7
+@var            color    secondaryUiColor   "Post button color"                    #d97dad
+@var            color    columnColor        "Main Column color"                    #2f252acc
+@var            color    secondaryColumnColor "Column color 2"                     #393035de
+@var            color    detailsColor       "Column color 3"                       #5e4c57
+@var            color    backgroundColor    "Main background color"                #d2c2cd
+==/UserStyle== */
+@-moz-document domain("sleeping.town"),
+domain("glitch.social"),
+domain("cybre.space"),
+domain("mastodon.social"),
+domain("toot.cat"),
+domain("botsin.space"),
+domain("chitter.xyz") {
+    /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
+quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
+*/
+    body,
+    .icon-button,
+    .text-icon-button,
+    .getting-started p,
+    .status-card__title,
+    .composer--upload_form--item > div input,
+    .column-header__button,
+    .account__display-name strong,
+    .status__display-name strong {
+        color: primaryFontColor;
+    }
+    a {
+        color: linkColor !important;
+    }
+    .dropdown-menu {
+        background: secondaryColumnColor !important;
+    }
+    .dropdown-menu__item a {
+        background: detailsColor !important;
+    }
+    .dropdown-menu__item a:hover,
+    .dropdown-menu__item a:focus {
+        background: primaryUiColor !important;
+    }
+    .focusable:focus {
+        background: secondaryColumnColor;
+    }
+
+    .text-icon-button,
+    .column-header__button {
+        color: secondaryFontColor;
+    }
+    .text-icon-button:active,
+    .text-icon-button:focus,
+    .text-icon-button:hover,
+    .column-header__button:hover {
+        color: primaryFontColor;
+    }
+    .icon-button {
+        color: secondaryFontColor;
+    }
+    .icon-button:active,
+    .icon-button:focus,
+    .icon-button:hover {
+        color: primaryFontColor;
+    }
+    .column-link__badge,
+    .column-inline-form,
+    .setting-text {
+        color: primaryFontColor;
+    }
+
+    .drawer__tab {
+        color: primaryFontColor;
+    }
+    ::-webkit-scrollbar-track {
+        background: detailsColor !important;
+        border: 1px solid secondaryColumnColor;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: secondaryColumnColor !important;
+    }
+    .column-header,
+    .column-header__button,
+    .column-header > button,
+    .compose-form .compose-form__buttons-wrapper,
+    .column-header__back-button,
+    .drawer--header,
+    .drawer__header {
+        background: primaryUiColor !important;
+    }
+    .column {
+        background: columnColor;
+    }
+    .empty-column-indicator,
+    .error-column {
+        color: secondaryFontColor;
+    }
+    .column-back-button,
+    .column-header__back-button {
+        background: primaryUiColor !important;
+    }
+    .detailed-status__action-bar,
+    .notification-follow,
+    .status {
+        border-bottom-color: secondaryColumnColor;
+    }
+    .muted .status__content a,
+    .muted .status__content p,
+    .muted .status__display-name strong {
+        color: secondaryFontColor;
+    }
+
+    .composer--options {
+        background: primaryUiColor !important;
+    }
+    .ui {
+        background-color: backgroundColor;
+    }
+    .search-results {
+        color: secondaryFontColor;
+    }
+    .column-subheading,
+    .getting-started {
+        background: secondaryColumnColor !important;
+        color: secondaryFontColor;
+    }
+    .column-link {
+        color: primaryFontColor !important;
+        background: detailsColor;
+    }
+    .column-link:hover {
+        background: secondaryColumnColor;
+    }
+    .getting-started {
+        color: secondaryFontColor;
+    }
+    .getting-started__wrapper,
+    .getting_started {
+        background: none;
+    }
+    .getting-started__footer {
+        background: secondaryColumnColor;
+    }
+    .composer--reply,
+    .reply-indicator {
+        background: detailsColor;
+        color: secondaryFontColor;
+    }
+    .composer--reply > .content,
+    .reply-indicator__header,
+    .reply-indicator__content,
+    .reply-indicator__display-name {
+        color: secondaryFontColor;
+    }
+    .detailed-status,
+    .focusable:focus .detailed-status__action-bar {
+        background: detailsColor;
+    }
+    .focusable:focus .detailed-status,
+    .detailed-status__action-bar {
+        background: secondaryColumnColor;
+    }
+    .status__content {
+        color: primaryFontColor;
+    }
+    .status__content__spoiler-link {
+        background: secondaryColumnColor !important;
+        color: primaryFontColor !important;
+    }
+    .focusable:focus .status__content__spoiler-link,
+    .muted .status__content__spoiler-link {
+        background: detailsColor !important;
+    }
+    .status.collapsed .status__content:after {
+        background: linear-gradient(rgba(40, 44, 55, 0), secondaryColumnColor);
+    }
+    .account__header .account__header__fields dl {
+        border-top: 1px solid secondaryColumnColor;
+        border-bottom: 1px solid secondaryColumnColor;
+    }
+    .account__header .account__header__fields dt {
+        color: primaryFontColor;
+        background: secondaryColumnColor;
+    }
+    .account__header .account__header__fields dd {
+        color: primaryFontColor;
+        background: detailsColor;
+    }
+    .account__disclaimer {
+        color: primaryFontColor;
+    }
+    .account__section-headline {
+        background: secondaryColumnColor;
+    }
+    .account__action-bar__tab > span {
+        color: primaryFontColor;
+    }
+    .account__action-bar__tab strong,
+    .status__prepend,
+    .status__prepend .status__display-name strong,
+    .status__relative-time {
+        color: secondaryFontColor;
+    }
+    .status.status-direct {
+        background: detailsColor;
+        color: primaryFontColor;
+    }
+    .status-card {
+        background: detailsColor;
+    }
+    .status-card:hover,
+    a.status-card:hover {
+        background: secondaryColumnColor;
+    }
+    .navigation-bar,
+    .drawer--account {
+        color: secondaryFontColor;
+        background: secondaryColumnColor;
+    }
+    .compose-form .compose-form__modifiers {
+        background: primaryFontColor;
+    }
+
+    .composer--upload_form,
+    .compose-form .compose-form__modifiers .compose-form__upload-wrapper {
+        color: primaryFontColor;
+    }
+    .composer--upload_form--item > div > .close {
+        color: primaryFontColor;
+    }
+    .composer--upload_form--item > div input::placeholder {
+        color: secondaryFontColor;
+    }
+}
