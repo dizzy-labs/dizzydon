@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           Dizzydon-pastel-pink
+@name           Dizzydon-Theme-Template
 @namespace      dizzy-labs
 @version        1.0.1
 @description    A theme style for use dizzydon
@@ -10,14 +10,28 @@
 @preprocessor   stylus
 
 @var            color    primaryFontColor   "Primary font color"                   #fff1e8
-@var            color    secondaryFontColor "Secondary,lower contrast, font color" #c8b2c3
-@var            color    linkColor          "Font color for links"                 #ffb3ec
-@var            color    primaryUiColor     "Header colors"                        #7996f7
-@var            color    secondaryUiColor   "Post button color"                    #d97dad
-@var            color    columnColor        "Main Column color"                    #2f252acc
-@var            color    secondaryColumnColor "Column color 2"                     #393035de
-@var            color    detailsColor       "Column color 3"                       #5e4c57
-@var            color    backgroundColor    "Main background color"                #d2c2cd
+@var            color    secondaryFontColor "Secondary,lower contrast, font color" #c2c3c7
+@var            color    linkColor          "Font color for links"                 #c2c3c7
+@var            color    primaryUiColor     "Header colors"                        #1D2B53
+@var            color    secondaryUiColor   "Post button color"                    #7E2553
+@var            color    columnColor        "Main Column color"                    #24221e
+@var            color    secondaryColumnColor "Column color 2"                     #191715
+@var            color    detailsColor       "Column color 3"                       #37322e
+@var            color    backgroundColor    "Main background color"                #5f574f
+@var            select   backgroundImage    "Background Image (Best with tranparent column colors)" {
+"None":"none",
+"Aurora":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/aurora.png\"",
+"Black Hole":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/black-hole.jpg\"",
+"Black Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/andromeda.jpg\"",
+"Blue Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blue-nebula.jpg\"",
+"Blue Starry Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blue-planet-atmosphere.png\"",
+"Blueshifted Lensed Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blueshifted-stars.png\"",
+"Planet Surface":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/planet-surface.png\"",
+"Planet":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/planet.png\"",
+"Ringed Planet Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/ringed-planet-atmosphere.jpg\"",
+"Star and Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/star-and-galaxy.png\"",
+"Star Cluster":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/star-cluster.jpg\""
+}
 ==/UserStyle== */
 @-moz-document domain("sleeping.town"),
 domain("glitch.social"),
@@ -200,6 +214,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .ui {
         background-color: backgroundColor;
+        background-image: url(backgroundImage) !important;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .drawer--search input,
     .search__input {
