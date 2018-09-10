@@ -11,8 +11,10 @@ A customizable userstyle for Mastodon
 * Customizable colors and toggles for shadows
 * Adjustable transparency in custom colors (so you can have semi-transparent columns)
 * Nicer Show More/Less buttons on their own line
+* Uploaded images stack in a column instead of squeezing into a 2x2 grid
+* Support for theme styles
 
-<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-pink-reverse-columns.png" width="600px" alt="dizzydon with a lighter styling and reversed columns">
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-better-spoilers.png" width="300px" alt="An example of the full size Show More/Less buttons"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-upload-images.png" width="180px" alt="example of uploaded images stacking"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="160px" alt="config menu for dizzydon v2.3.0">
 
 # How to Install
 (First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
@@ -20,8 +22,6 @@ A customizable userstyle for Mastodon
 The easiest way is to click this link to [install dizzydon](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/dizzydon_source.user.css) by opening the .user.css file and clicking <b>Install Style</b> in the top left of the screen that stylus opens.
 
 After installing you can open the config menu by clicking the gear icon either on the management page or after clicking the icon in your browser.
-
-<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="200px" alt="config menu for dizzydon v2.2.1">
 
 # Updating
 Open the management page for stylus and click the refresh icon for the style
