@@ -6,7 +6,7 @@
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
 @supportURL     https://github.com/dizzy-labs/mastodon-userstyle/issues
-@license        CC BY-NC-SA
+@license        CC BY-SA 4.0
 @preprocessor   stylus
 
 @var            color    primaryFontColor   "Primary font color"                   #fff1e8
@@ -95,7 +95,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .drawer__inner__mastodon {
         background: transparent none no-repeat bottom/100% auto;
     }
-    .drawer__inner {
+    .columns-area .drawer__inner {
         background: none !important;
     }
     .drawer--header,
