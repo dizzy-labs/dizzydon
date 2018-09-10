@@ -38,3 +38,5 @@ Alternatively, follow the install instructions again for the new version and it 
 * * Drop shadows use hardware-acceleration, so this is probably related to your graphics hardware.
 * * If using Dizzydon, turn off the drop-shadows in the settings menu.
 * * If using pico-8stodon, [install the no-filter version](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/pico-8stodon_no-filter.user.css).
+
+license: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 
