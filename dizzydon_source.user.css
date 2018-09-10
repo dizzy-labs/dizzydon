@@ -18,15 +18,30 @@
 @var            color    secondaryColumnColor "Column color 2"                     #191715
 @var            color    detailsColor       "Column color 3"                       #37322e
 @var            color    backgroundColor    "Main background color"                #5f574f
+@var            select   backgroundImage    "Background Image (Best with tranparent column colors)" {
+"None":"none",
+"Aurora":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/aurora.png\"",
+"Black Hole":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/black-hole.jpg\"",
+"Black Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/andromeda.jpg\"",
+"Blue Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blue-nebula.jpg\"",
+"Blue Starry Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blue-planet-atmosphere.png\"",
+"Blueshifted Lensed Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blueshifted-stars.png\"",
+"Planet Surface":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/planet-surface.png\"",
+"Planet":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/planet.png\"",
+"Ringed Planet Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/ringed-planet-atmosphere.jpg\"",
+"Star and Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/star-and-galaxy.png\"",
+"Star Cluster":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/star-cluster.jpg\""
+}
 @var            checkbox lightHeaders       "Use dark font for headers"            0
 @var            checkbox lightButtons       "Use dark font for post button"        0
 @var            checkbox rightAlign         "Start columns on the right"           0
 @var            checkbox noReplyCount       "Hide reply count"                     1
 @var            checkbox columnShadows      "Use box-shadows on columns"           1
-@var            checkbox dropShadows        "Use drop-shadow filters"              1
+@var            checkbox dropShadows        "Use drop-shadow filters"               1
 @var            checkbox dropShadowsHeaders "Use drop-shadow on column headers"    0
 @var            checkbox dropShadowsDrawer  "Use drop-shadow on drawer area"       1
 @var            checkbox dropShadowsButtons "Use drop-shadow on icon buttons"      1
+
 
 ==/UserStyle== */
 @-moz-document domain("sleeping.town"),
@@ -552,6 +567,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .ui {
         background-color: backgroundColor;
+        background-image: url(backgroundImage) !important;
+        background-attachment: fixed;
+        background-size: cover;
     }
     .drawer--search input,
     .search__input {
