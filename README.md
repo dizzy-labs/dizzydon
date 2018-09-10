@@ -27,6 +27,12 @@ After installing you can open the config menu by clicking the gear icon either o
 Open the management page for stylus and click the refresh icon for the style
 Alternatively, follow the install instructions again for the new version and it will overwrite the old version.
 
+# Themes
+Themes are stripped down versions of dizzydon that only alter the colors and nothing else. They are meant to be used in addition to Dizzydon to allow custom color settings to be saved and shared.
+
+Dizzydon themes are installed and used just like the base Dizzydon.
+[Navigate to the themes folder](https://github.com/dizzy-labs/dizzydon/tree/master/themes) then open the raw <theme>.user.css file in your browser (basically click on of the files above to open it, then find and click the <b>"raw"</b> button) and install it with stylus. Then enable it on any site you use Dizzydon on so it overrides the colors.
+
 # Troubleshooting and FAQ
 * # What's Pico-8stodon?
 * * This is the older version of Dizzydon. It's recommended that you use Dizzydon instead, as this is no longer actively maintained and lacks all of Dizzydon's customization without any benefits of it's own. It's available on userstyles.org so you can download it easily from there if you like the default colors and transparency effects.
