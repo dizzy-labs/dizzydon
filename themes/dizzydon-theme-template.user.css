@@ -20,17 +20,17 @@
 @var            color    backgroundColor    "Main background color"                #5f574f
 @var            select   backgroundImage    "Background Image (Best with tranparent column colors)" {
 "None":"none",
-"Aurora":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/aurora.png\"",
-"Black Hole":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/black-hole.jpg\"",
-"Black Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/andromeda.jpg\"",
-"Blue Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blue-nebula.jpg\"",
-"Blue Starry Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blue-planet-atmosphere.png\"",
-"Blueshifted Lensed Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/blueshifted-stars.png\"",
-"Planet Surface":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/planet-surface.png\"",
-"Planet":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/planet.png\"",
-"Ringed Planet Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/ringed-planet-atmosphere.jpg\"",
-"Star and Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/star-and-galaxy.png\"",
-"Star Cluster":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/feature-bg-images/background-images/star-cluster.jpg\""
+"Aurora":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/aurora.png\"",
+"Black Hole":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/black-hole.jpg\"",
+"Black Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/andromeda.jpg\"",
+"Blue Nebula":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/blue-nebula.jpg\"",
+"Blue Starry Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/blue-planet-atmosphere.png\"",
+"Blueshifted Lensed Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/blueshifted-stars.png\"",
+"Planet Surface":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/planet-surface.png\"",
+"Planet":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/planet.png\"",
+"Ringed Planet Sky":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/ringed-planet-atmosphere.jpg\"",
+"Star and Galaxy":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/star-and-galaxy.png\"",
+"Star Cluster":"\"https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/background-images/star-cluster.jpg\""
 }
 ==/UserStyle== */
 @-moz-document domain("sleeping.town"),
