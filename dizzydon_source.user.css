@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon
 @namespace      dizzy-labs
-@version        2.4.0
+@version        2.4.1
 @description    Redesign of Mastodon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -376,35 +376,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
             box-shadow: 3px 4px 9px 0px #000;
         }
     }
-<<<<<<< HEAD
-=======
-    if lightHeaders {
-
-        .compose-form .compose-form__buttons-wrapper,
-        .column-header__back-button,
-        .drawer--header,
-        .drawer__header,
-        .composer--options .icon-button,
-        .composer--options .text-icon-button .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter,
-        .compose-form__buttons .fa,
-        .compose-form__buttons-wrapper .icon-buttons .fa,
-        .compose-form__buttons .text-icon-button,
-        .compose-form__buttons-wrapper .icon-button,
-        .drawer--header a,
-        .drawer__header a {
-            color: #000 !important;
-            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
-        }
-    }
-    if lightButtons {
-        .button,
-        .btn,
-        .block-button {
-            color: #000 !important;
-            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
-        }
-    }
->>>>>>> 2e88b0dd3d0b076c418d5c13af3fda486670e09a
     if noReplyCount {
         .status__action-bar__counter__label {
             display: none !important;
@@ -732,7 +703,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .composer--upload_form--item > div input::placeholder {
         color: secondaryFontColor;
     }
-
+    
     if lightHeaders {
         .column-header,
         .column-header > button,
