@@ -11,8 +11,10 @@ A customizable userstyle for Mastodon
 * Customizable colors and toggles for shadows
 * Adjustable transparency in custom colors (so you can have semi-transparent columns)
 * Nicer Show More/Less buttons on their own line
-* Uploaded images stack in a column instead of squeezing into a 2x2 grid
+* Uploaded images stack under the compose box instead of squeezing into a 2x2 grid
 * Support for theme styles
+* Background images
+* Toggles to hide reply counts and filter tombstones
 
 <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-better-spoilers.png" width="300px" alt="An example of the full size Show More/Less buttons"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-upload-images.png" width="180px" alt="example of uploaded images stacking"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="160px" alt="config menu for dizzydon v2.3.0">
 
