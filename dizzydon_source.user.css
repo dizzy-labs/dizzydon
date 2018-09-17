@@ -35,7 +35,6 @@
 @var            checkbox lightHeaders       "Use dark font for headers"            0
 @var            checkbox lightButtons       "Use dark font for post button"        0
 @var            checkbox rightAlign         "Start columns on the right"           0
-@var            checkbox newActionBars      "Use redesigned status action bars"    1
 @var            checkbox noReplyCount       "Hide reply count"                     1
 @var            checkbox noTombstones       "Hide filtered post tombstones"         1
 @var            checkbox animEmojos         "Animate emoji without hover on sleeping town flavor" 1
@@ -377,62 +376,6 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
             box-shadow: 3px 4px 9px 0px #000;
         }
     }
-    if lightHeaders {
-
-        .compose-form .compose-form__buttons-wrapper,
-        .column-header__back-button,
-        .drawer--header,
-        .drawer__header,
-        .composer--options .icon-button,
-        .composer--options .text-icon-button .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter,
-        .compose-form__buttons .fa,
-        .compose-form__buttons-wrapper .icon-buttons .fa,
-        .compose-form__buttons .text-icon-button,
-        .compose-form__buttons-wrapper .icon-button,
-        .drawer--header a,
-        .drawer__header a {
-            color: #000 !important;
-            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
-        }
-    }
-    if lightButtons {
-        .button,
-        .btn,
-        .block-button {
-            color: #000 !important;
-            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
-        }
-    }
-    if newActionBars {
-        .status__action-bar {
-            position: relative;
-            margin-top: 8px;
-            height: 18px;
-            transition: height 0.2s;
-            transition-delay: 0.4s;
-            padding: 0;
-        }
-        .status__action-bar > .icon-button,
-        .status__action-bar-dropdown,
-        .status__action-bar__counter{
-            position: absolute;
-            top: 0px;
-            opacity: 1;
-        }
-
-        .status__action-bar__counter {
-            left: -32px !important;
-        }
-        .status__action-bar-dropdown{
-            right: 0px !important;
-        }
-        .status__action-bar .star-icon, {
-            right: calc(30%);
-        }
-        .status__action-bar > .icon-button:nth-child(2){
-            left: calc(30% - 32px);
-        }
-    }
     if noReplyCount {
         .status__action-bar__counter__label {
             display: none !important;
@@ -590,6 +533,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .drawer--header,
     .drawer__header {
         background: primaryUiColor !important;
+    }
+    .column-header .column-header__icon {
+        color: #fff1e8;
     }
     .column {
         background: columnColor;
@@ -756,5 +702,36 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     .composer--upload_form--item > div input::placeholder {
         color: secondaryFontColor;
+    }
+
+    if lightHeaders {
+        .column-header,
+        .column-header > button,
+        .compose-form .compose-form__buttons-wrapper,
+        .column-header__back-button,
+        .drawer--header,
+        .drawer__header,
+        .composer--options .icon-button,
+        .composer--options .text-icon-button .compose-form .compose-form__buttons-wrapper .character-counter__wrapper .character-counter,
+        .compose-form__buttons .fa,
+        .compose-form__buttons-wrapper .icon-buttons .fa,
+        .compose-form__buttons .text-icon-button,
+        .compose-form__buttons-wrapper .icon-button,
+        .drawer--header a,
+        .drawer__header a {
+            color: #000 !important;
+            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
+        }
+        .column-header .column-header__icon {
+            color: #000;
+        }
+    }
+    if lightButtons {
+        .button,
+        .btn,
+        .block-button {
+            color: #000 !important;
+            text-shadow: 0 0 0.25em rgba(255, 255, 255, .35) !important;
+        }
     }
 }
