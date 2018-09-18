@@ -1,8 +1,9 @@
 # Dizzydon
-<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-default.png" width="600px" alt="dizzydon default styling">
 A customizable userstyle for Mastodon
 
 [Requires Stylus](https://add0n.com/stylus.html)
+
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-default.png" width="360px" height="190px" alt="dizzydon default styling"><img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-transparent-blue.png" width="360px" height="190px" alt="dizzydon with the transparent blue theme"><img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-planet-rings.png" width="360px" height="190px" alt="dizzydon with a customized version of the default theme"><img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-pink-2.2.1.PNG" width="360px" height="190px" alt="dizzydon 2.2.1 with the pastel-pink theme">
 
 # Features
 * Custom css for mastodon
