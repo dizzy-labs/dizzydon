@@ -25,7 +25,8 @@ domain("cybre.space"),
 domain("mastodon.social"),
 domain("toot.cat"),
 domain("botsin.space"),
-domain("chitter.xyz") {
+domain("chitter.xyz"),
+domain("elekk.xyz"){
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */
