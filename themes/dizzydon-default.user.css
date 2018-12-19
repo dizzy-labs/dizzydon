@@ -19,7 +19,8 @@
 @var            color    detailsColor       "Column color 3"                       #37322e
 @var            color    backgroundColor    "Main background color"                #5f574f
 ==/UserStyle== */
-#mastodon {
+#mastodon,
+body.admin > .admin-wrapper {
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */

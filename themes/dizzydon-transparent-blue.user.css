@@ -20,7 +20,8 @@
 @var            color    backgroundColor    "Main background color"                #01000f
 
 ==/UserStyle== */
-#mastodon {
+#mastodon,
+body.admin > .admin-wrapper {
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */

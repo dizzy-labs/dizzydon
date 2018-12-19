@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon-green
 @namespace      dizzy-labs
-@version        2.2.4
+@version        2.2.5
 @description    A theme style for use dizzydon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -19,7 +19,8 @@
 @var            color    detailsColor       "Column color 3"                       #1f3500
 @var            color    backgroundColor    "Main background color"                #625e52
 ==/UserStyle== */
-#mastodon {
+#mastodon,
+body.admin > .admin-wrapper {
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */
