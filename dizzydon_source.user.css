@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Dizzydon
 @namespace      dizzy-labs
-@version        2.4.1
+@version        2.4.2
 @description    Redesign of Mastodon
 @author         dizzy-labs
 @homepageURL    https://github.com/dizzy-labs/mastodon-userstyle
@@ -46,14 +46,7 @@
 
 
 ==/UserStyle== */
-@-moz-document domain("sleeping.town"),
-domain("glitch.social"),
-domain("cybre.space"),
-domain("mastodon.social"),
-domain("toot.cat"),
-domain("botsin.space"),
-domain("chitter.xyz"),
-domain("elekk.xyz"){
+#mastodon{
     /*supports vanilla mastodon front end, sleeping town front end, and glitch-soc front ends
 quick and dirty overrides of the default stylings. if this CSS seems awful (it is) its mostly cause of that and selectively overriding mismatched silliness
 */
@@ -704,7 +697,7 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .composer--upload_form--item > div input::placeholder {
         color: secondaryFontColor;
     }
-    
+
     if lightHeaders {
         .column-header,
         .column-header > button,
