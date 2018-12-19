@@ -37,9 +37,6 @@ Dizzydon themes are installed and used just like the base Dizzydon.
 [Navigate to the themes folder](https://github.com/dizzy-labs/dizzydon/tree/master/themes) then open the raw <theme>.user.css file in your browser (basically click on of the files above to open it, then find and click the <b>"raw"</b> button) and install it with stylus. Then enable it on any site you use Dizzydon on so it overrides the colors.
 
 # Troubleshooting and FAQ
-* # What's Pico-8stodon?
-* * This is the older version of Dizzydon. It's recommended that you use Dizzydon instead, as this is no longer actively maintained and lacks all of Dizzydon's customization without any benefits of it's own. It's available on userstyles.org so you can download it easily from there if you like the default colors and transparency effects.
-[Install Pico-8stodon](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/pico-8stodon.user.css) or [Install from userstyles.org](https://userstyles.org/styles/163455/pico-8stodon) 
 * # Hey, this doesn't change anything on my instance?
 * * Be sure to add your mastodon instance to the "Applies to" section on the styles settings page to use it on an instance that's not alread set up. Open the management page for Stylus, then click this style in the list, then add your instances domain to the list of websites it applies to at the bottom or middle of the edit page.
 
@@ -48,4 +45,4 @@ Dizzydon themes are installed and used just like the base Dizzydon.
 * * If using Dizzydon, turn off the drop-shadows in the settings menu.
 * * If using pico-8stodon, [install the no-filter version](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/pico-8stodon_no-filter.user.css).
 
-license: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) 
+license: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)
