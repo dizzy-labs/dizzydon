@@ -39,9 +39,7 @@ Dizzydon themes are installed and used just like the base Dizzydon.
 # Troubleshooting and FAQ
 
 * # The shadows are flickering
-* * Drop shadows use hardware-acceleration, so this is probably related to your graphics hardware.
-* * If using Dizzydon, turn off the drop-shadows in the settings menu.
-* * If using pico-8stodon, [install the no-filter version](https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/pico-8stodon_no-filter.user.css).
+* * Drop shadows use hardware-acceleration, so this is like cause by your graphics hardware. Disable drop shadows in the settings menu.
 
 For any other issue, please [check open/closed issues or create a new issue.](https://github.com/dizzy-labs/dizzydon/issues)
 
