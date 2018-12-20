@@ -3,7 +3,7 @@ A customizable userstyle for Mastodon
 
 [Requires Stylus](https://add0n.com/stylus.html)
 
-<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-default.png" width="360px" height="190px" alt="dizzydon default styling"><img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-three-column-reverse.png" width="360px" height="190px" alt="dizzydon with three pinned columns in reverse order"><img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-aurora.png" width="360px" height="190px" alt="dizzydon with a customized version of the default theme"><img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-pink-2.4.3.png" width="360px" height="190px" alt="dizzydon 2.4.3 with the pastel-pink theme">
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-default.png" width="360px" height="190px" alt="dizzydon default styling"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-three-column-reverse.png" width="360px" height="190px" alt="dizzydon with three pinned columns in reverse order"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-aurora.png" width="360px" height="190px" alt="dizzydon with a customized version of the default theme"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-pink-2.4.3.png" width="360px" height="190px" alt="dizzydon 2.4.3 with the pastel-pink theme">
 
 # Features
 * Custom css for mastodon
@@ -17,7 +17,7 @@ A customizable userstyle for Mastodon
 * Background images
 * Toggles to hide reply counts and filter tombstones
 
-<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-better-spoilers.png" width="480px" alt="An example of the full size Show More/Less buttons"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-upload-images.png" width="168px" alt="example of uploaded images stacking"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="277px" alt="config menu for dizzydon v2.4.3">
+<img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-better-spoilers.png" width="360px" alt="An example of the full size Show More/Less buttons"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-upload-images.png" width="168px" alt="example of uploaded images stacking"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="277px" alt="config menu for dizzydon v2.4.3">
 
 # How to Install
 (First, install [Stylus](https://add0n.com/stylus.html) for your browser if you haven't aleady.)
