@@ -20,10 +20,11 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Desktop (please complete the following information):**
+**Environment (please complete the following information to the best of your ability):**
  - OS: [e.g. Manjaro, Windows]
- - Browser [e.g. chrome, safari]
+ - Browser [e.g. firefox, safari]
  - Dizzydon Version [e.g. 2.4.0]
+ - Mastodon Instance [e.g. elekk.xyz]
 
 **Additional context**
 Add any other context about the problem here.
