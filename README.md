@@ -16,6 +16,8 @@ A customizable userstyle for Mastodon
 * Support for theme styles
 * Background images
 * Toggles to hide reply counts and filter tombstones
+* Option to customize post button text
+* Styled scrollbars on firefox (thin scrollbars optional)
 
 <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-better-spoilers.png" width="360px" alt="An example of the full size Show More/Less buttons"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-upload-images.png" width="168px" alt="example of uploaded images stacking"> <img src="https://raw.githubusercontent.com/dizzy-labs/dizzydon/master/screenshots/dizzydon-configuration.png" width="277px" alt="config menu for dizzydon v2.4.3">
 
