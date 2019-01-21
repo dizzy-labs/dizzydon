@@ -516,11 +516,11 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         color: primaryFontColor;
     }
     ::-webkit-scrollbar-track {
-        background: detailsColor !important;
-        border: 1px solid secondaryColumnColor;
+        background: secondaryColumnColor !important;
+        border: 1px solid detailsColor;
     }
     ::-webkit-scrollbar-thumb {
-        background: secondaryColumnColor !important;
+        background: primaryUiColor !important;
     }
     * {
         scrollbar-color: primaryUiColor secondaryColumnColor;
