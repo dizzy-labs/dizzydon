@@ -39,6 +39,7 @@
 @var            checkbox rightAlign         "Start columns on the right"           0
 @var            checkbox noReplyCount       "Hide reply count"                     1
 @var            checkbox noTombstones       "Hide filtered post tombstones"        1
+@var            checkbox ffThinScrollbars   "Thin scrollbars on Firefox"           1
 @var            checkbox animEmojos         "Animate emoji without hover on sleeping town flavor" 1
 @var            checkbox columnShadows      "Use box-shadows on columns"           1
 @var            checkbox dropShadows        "Use drop-shadow filters"              1
@@ -520,6 +521,14 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     }
     ::-webkit-scrollbar-thumb {
         background: secondaryColumnColor !important;
+    }
+    * {
+        scrollbar-color: primaryUiColor secondaryColumnColor;
+    }
+    if ffThinScrollbars {
+        * {
+            scrollbar-width: thin;
+        }
     }
     .column-header,
     .column-header__button,
