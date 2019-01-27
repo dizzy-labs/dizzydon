@@ -539,6 +539,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .drawer__header {
         background: primaryUiColor !important;
     }
+    .notification__filter-bar {
+        background: secondaryColumnColor !important;
+    }
     .column-header .column-header__icon {
         color: #fff1e8;
     }
@@ -758,3 +761,4 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
         }
     }
 }
+
