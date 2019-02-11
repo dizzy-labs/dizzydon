@@ -70,6 +70,9 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
     .star-icon.active {
         color: #ffec27 !important;
     }
+    .bookmark-icon.active {
+        color: #ff665e;
+    }
     .composer--options--dropdown--content--item .fa-globe,
     .status__visibility-icon.fa-globe,
     .column-header > .column-header__back-button,
