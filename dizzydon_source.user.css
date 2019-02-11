@@ -765,7 +765,8 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
             background-color: lighten(secondaryFontColor, 10);
         }
     }
-    button.icon-button.disabled i.fa-retweet, .status-direct button.icon-button.disabled i.fa-retweet {
+    button.icon-button.disabled i.fa-retweet,
+    .status-direct button.icon-button.disabled i.fa-retweet {
         &, &:hover {
             background-color: darken(secondaryFontColor, 30);
         }
@@ -785,7 +786,8 @@ quick and dirty overrides of the default stylings. if this CSS seems awful (it i
             color: lighten(secondaryFontColor, 10);
         }
     }
-    button.icon-button.disabled i.fa-retweet, .status-direct button.icon-button.disabled i.fa-retweet {
+    button.icon-button.disabled i.fa-retweet,
+    .status-direct button.icon-button.disabled i.fa-retweet {
         &, &:hover {
             color: darken(secondaryFontColor, 30);
         }
